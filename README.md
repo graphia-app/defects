@@ -1,10 +1,8 @@
 # Summary
-| Code | Severity | Tool | Count (20) |
+| Code | Severity | Tool | Count (16) |
 |---|---|---|---|
 | connect-non-signal | warning | clazy | 10 |
 | modernize-use-nullptr | warning | clang-tidy | 6 |
-| reserve-candidates | warning | clazy | 3 |
-| modernize-loop-convert | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -19,8 +17,6 @@
 | [opengldebuglogger.cpp:36](https://github.com/graphia-app/graphia/blob/annotation-iqr/source/app/rendering/opengldebuglogger.cpp#L36 "source/app/rendering/opengldebuglogger.cpp:36"):13 | QOpenGLDebugLogger::messageLogged is not a signal |
 | [updater.cpp:77](https://github.com/graphia-app/graphia/blob/annotation-iqr/source/app/updates/updater.cpp#L77 "source/app/updates/updater.cpp:77"):5 | QNetworkAccessManager::finished is not a signal |
 | [watchdog.cpp:41](https://github.com/graphia-app/graphia/blob/annotation-iqr/source/app/watchdog.cpp#L41 "source/app/watchdog.cpp:41"):5 | QThread::finished is not a signal |
-| <h3>modernize-loop-convert</h3> | <h4>clang-tidy warning</h4> |
-| [correlationplotitem_columnannotations.cpp:149](https://github.com/graphia-app/graphia/blob/annotation-iqr/source/plugins/correlation/correlationplotitem_columnannotations.cpp#L149 "source/plugins/correlation/correlationplotitem_columnannotations.cpp:149"):9 | use range-based for loop instead |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [biopaxfileparser.cpp:109](https://github.com/graphia-app/graphia/blob/annotation-iqr/source/shared/loading/biopaxfileparser.cpp#L109 "source/shared/loading/biopaxfileparser.cpp:109"):49 | use nullptr |
 | [pairwisetxtfileparser.cpp:91](https://github.com/graphia-app/graphia/blob/annotation-iqr/source/shared/loading/pairwisetxtfileparser.cpp#L91 "source/shared/loading/pairwisetxtfileparser.cpp:91"):18 | use nullptr |
@@ -28,7 +24,3 @@
 | [pairwisetxtfileparser.cpp:95](https://github.com/graphia-app/graphia/blob/annotation-iqr/source/shared/loading/pairwisetxtfileparser.cpp#L95 "source/shared/loading/pairwisetxtfileparser.cpp:95"):31 | use nullptr |
 | [performancecounter.cpp:35](https://github.com/graphia-app/graphia/blob/annotation-iqr/source/shared/utils/performancecounter.cpp#L35 "source/shared/utils/performancecounter.cpp:35"):12 | use nullptr |
 | [watchdog.cpp:111](https://github.com/graphia-app/graphia/blob/annotation-iqr/source/app/watchdog.cpp#L111 "source/app/watchdog.cpp:111"):24 | use nullptr |
-| <h3>reserve-candidates</h3> | <h4>clazy warning</h4> |
-| [correlationplotitem_columnannotations.cpp:150](https://github.com/graphia-app/graphia/blob/annotation-iqr/source/plugins/correlation/correlationplotitem_columnannotations.cpp#L150 "source/plugins/correlation/correlationplotitem_columnannotations.cpp:150"):13 | Reserve candidate |
-| [correlationplotitem_columnannotations.cpp:281](https://github.com/graphia-app/graphia/blob/annotation-iqr/source/plugins/correlation/correlationplotitem_columnannotations.cpp#L281 "source/plugins/correlation/correlationplotitem_columnannotations.cpp:281"):13 | Reserve candidate |
-| [correlationplotitem_continuous.cpp:403](https://github.com/graphia-app/graphia/blob/annotation-iqr/source/plugins/correlation/correlationplotitem_continuous.cpp#L403 "source/plugins/correlation/correlationplotitem_continuous.cpp:403"):13 | Reserve candidate |

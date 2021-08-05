@@ -1,15 +1,11 @@
 # Summary
-| Code | Severity | Tool | Count (18) |
+| Code | Severity | Tool | Count (16) |
 |---|---|---|---|
 | connect-non-signal | warning | clazy | 10 |
 | modernize-use-nullptr | warning | clang-tidy | 6 |
-| bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions | warning | clang-tidy | 2 |
 # Details
 | File:Line:Column | Message |
 |---|---|
-| <h3>bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions</h3> | <h4>clang-tidy warning</h4> |
-| [statistics.h:128](https://github.com/graphia-app/graphia/blob/clang-tidy-fatal-error-suppression/source/shared/utils/statistics.h#L128 "source/shared/utils/statistics.h:128"):45 | narrowing conversion from 'unsigned long' to signed type '__gnu_cxx::__normal_iterator<double *, std::vector<double>>::difference_type' (aka 'long') is implementation-defined |
-| [statistics.h:133](https://github.com/graphia-app/graphia/blob/clang-tidy-fatal-error-suppression/source/shared/utils/statistics.h#L133 "source/shared/utils/statistics.h:133"):61 | narrowing conversion from 'unsigned long' to signed type '__gnu_cxx::__normal_iterator<double *, std::vector<double>>::difference_type' (aka 'long') is implementation-defined |
 | <h3>connect-non-signal</h3> | <h4>clazy warning</h4> |
 | [downloadqueue.cpp:33](https://github.com/graphia-app/graphia/blob/clang-tidy-fatal-error-suppression/source/shared/utils/downloadqueue.cpp#L33 "source/shared/utils/downloadqueue.cpp:33"):5 | QNetworkAccessManager::finished is not a signal |
 | [graphconsistencychecker.cpp:44](https://github.com/graphia-app/graphia/blob/clang-tidy-fatal-error-suppression/source/app/graph/graphconsistencychecker.cpp#L44 "source/app/graph/graphconsistencychecker.cpp:44"):9 | Graph::graphChanged is not a signal |

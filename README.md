@@ -1,14 +1,11 @@
 # Summary
-| Code | Severity | Tool | Count (17) |
+| Code | Severity | Tool | Count (16) |
 |---|---|---|---|
 | connect-non-signal | warning | clazy | 10 |
 | modernize-use-nullptr | warning | clang-tidy | 6 |
-| bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
-| <h3>bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions</h3> | <h4>clang-tidy warning</h4> |
-| [correlationplotitem_continuous.cpp:449](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/correlationplotitem_continuous.cpp#L449 "source/plugins/correlation/correlationplotitem_continuous.cpp:449"):61 | narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'int' is implementation-defined |
 | <h3>connect-non-signal</h3> | <h4>clazy warning</h4> |
 | [downloadqueue.cpp:33](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/downloadqueue.cpp#L33 "source/shared/utils/downloadqueue.cpp:33"):5 | QNetworkAccessManager::finished is not a signal |
 | [graphconsistencychecker.cpp:44](https://github.com/graphia-app/graphia/blob/master/source/app/graph/graphconsistencychecker.cpp#L44 "source/app/graph/graphconsistencychecker.cpp:44"):9 | Graph::graphChanged is not a signal |

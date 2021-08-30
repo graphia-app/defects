@@ -1,11 +1,17 @@
 # Summary
-| Code | Severity | Tool | Count (16) |
+| Code | Severity | Tool | Count (22) |
 |---|---|---|---|
 | connect-non-signal | warning | clazy | 10 |
 | modernize-use-nullptr | warning | clang-tidy | 6 |
+| clang-diagnostic-unused-parameter | warning | clang-tidy | 2 |
+| readability-static-accessed-through-instance | warning | clang-tidy | 2 |
+| unused-parameter | warning | generic | 2 |
 # Details
 | File:Line:Column | Message |
 |---|---|
+| <h3>clang-diagnostic-unused-parameter</h3> | <h4>clang-tidy warning</h4> |
+| [correlationplotitem.cpp:366](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/correlationplotitem.cpp#L366 "source/plugins/correlation/correlationplotitem.cpp:366"):55 | unused parameter 'event' |
+| [correlationplotitem.cpp:603](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/correlationplotitem.cpp#L603 "source/plugins/correlation/correlationplotitem.cpp:603"):51 | unused parameter 'event' |
 | <h3>connect-non-signal</h3> | <h4>clazy warning</h4> |
 | [downloadqueue.cpp:33](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/downloadqueue.cpp#L33 "source/shared/utils/downloadqueue.cpp:33"):5 | QNetworkAccessManager::finished is not a signal |
 | [graphconsistencychecker.cpp:44](https://github.com/graphia-app/graphia/blob/master/source/app/graph/graphconsistencychecker.cpp#L44 "source/app/graph/graphconsistencychecker.cpp:44"):9 | Graph::graphChanged is not a signal |
@@ -24,3 +30,9 @@
 | [pairwisetxtfileparser.cpp:95](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/pairwisetxtfileparser.cpp#L95 "source/shared/loading/pairwisetxtfileparser.cpp:95"):31 | use nullptr |
 | [performancecounter.cpp:35](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/performancecounter.cpp#L35 "source/shared/utils/performancecounter.cpp:35"):12 | use nullptr |
 | [watchdog.cpp:111](https://github.com/graphia-app/graphia/blob/master/source/app/watchdog.cpp#L111 "source/app/watchdog.cpp:111"):24 | use nullptr |
+| <h3>readability-static-accessed-through-instance</h3> | <h4>clang-tidy warning</h4> |
+| [adjacencymatrixfileparser.h:174](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/adjacencymatrixfileparser.h#L174 "source/shared/loading/adjacencymatrixfileparser.h:174"):9 | static member accessed through instance |
+| [qmltabulardataparser.h:144](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/qmltabulardataparser.h#L144 "source/shared/loading/qmltabulardataparser.h:144"):9 | static member accessed through instance |
+| <h3>unused-parameter</h3> | <h4>generic warning</h4> |
+| [correlationplotitem.cpp:366](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/correlationplotitem.cpp#L366 "source/plugins/correlation/correlationplotitem.cpp:366"):55 | unused parameter 'event' |
+| [correlationplotitem.cpp:603](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/correlationplotitem.cpp#L603 "source/plugins/correlation/correlationplotitem.cpp:603"):51 | unused parameter 'event' |

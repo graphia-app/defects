@@ -1,11 +1,18 @@
 # Summary
-| Code | Severity | Tool | Count (16) |
+| Code | Severity | Tool | Count (20) |
 |---|---|---|---|
 | connect-non-signal | warning | clazy | 10 |
 | modernize-use-nullptr | warning | clang-tidy | 6 |
+| google-explicit-constructor | warning | clang-tidy | 2 |
+| bugprone-forwarding-reference-overload | warning | clang-tidy | 1 |
+| bugprone-move-forwarding-reference | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
+| <h3>bugprone-forwarding-reference-overload</h3> | <h4>clang-tidy warning</h4> |
+| [void_callable_wrapper.h:46](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/void_callable_wrapper.h#L46 "source/shared/utils/void_callable_wrapper.h:46"):5 | constructor accepting a forwarding reference can hide the move constructor |
+| <h3>bugprone-move-forwarding-reference</h3> | <h4>clang-tidy warning</h4> |
+| [void_callable_wrapper.h:46](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/void_callable_wrapper.h#L46 "source/shared/utils/void_callable_wrapper.h:46"):76 | forwarding reference passed to std::move(), which may unexpectedly cause lvalues to be moved; use std::forward() instead |
 | <h3>connect-non-signal</h3> | <h4>clazy warning</h4> |
 | [downloadqueue.cpp:33](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/downloadqueue.cpp#L33 "source/shared/utils/downloadqueue.cpp:33"):5 | QNetworkAccessManager::finished is not a signal |
 | [graphconsistencychecker.cpp:44](https://github.com/graphia-app/graphia/blob/master/source/app/graph/graphconsistencychecker.cpp#L44 "source/app/graph/graphconsistencychecker.cpp:44"):9 | Graph::graphChanged is not a signal |
@@ -17,6 +24,9 @@
 | [opengldebuglogger.cpp:36](https://github.com/graphia-app/graphia/blob/master/source/app/rendering/opengldebuglogger.cpp#L36 "source/app/rendering/opengldebuglogger.cpp:36"):13 | QOpenGLDebugLogger::messageLogged is not a signal |
 | [updater.cpp:77](https://github.com/graphia-app/graphia/blob/master/source/app/updates/updater.cpp#L77 "source/app/updates/updater.cpp:77"):5 | QNetworkAccessManager::finished is not a signal |
 | [watchdog.cpp:41](https://github.com/graphia-app/graphia/blob/master/source/app/watchdog.cpp#L41 "source/app/watchdog.cpp:41"):5 | QThread::finished is not a signal |
+| <h3>google-explicit-constructor</h3> | <h4>clang-tidy warning</h4> |
+| [void_callable_wrapper.h:37](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/void_callable_wrapper.h#L37 "source/shared/utils/void_callable_wrapper.h:37"):9 | single-argument constructors must be marked explicit to avoid unintentional implicit conversions |
+| [void_callable_wrapper.h:46](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/void_callable_wrapper.h#L46 "source/shared/utils/void_callable_wrapper.h:46"):5 | single-argument constructors must be marked explicit to avoid unintentional implicit conversions |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [biopaxfileparser.cpp:109](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/biopaxfileparser.cpp#L109 "source/shared/loading/biopaxfileparser.cpp:109"):49 | use nullptr |
 | [pairwisetxtfileparser.cpp:91](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/pairwisetxtfileparser.cpp#L91 "source/shared/loading/pairwisetxtfileparser.cpp:91"):18 | use nullptr |

@@ -1,8 +1,10 @@
 # Summary
-| Code | Severity | Tool | Count (16) |
+| Code | Severity | Tool | Count (18) |
 |---|---|---|---|
 | connect-non-signal | warning | clazy | 10 |
 | modernize-use-nullptr | warning | clang-tidy | 6 |
+| google-explicit-constructor | warning | clang-tidy | 1 |
+| qstring-arg | warning | clazy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -17,6 +19,8 @@
 | [opengldebuglogger.cpp:36](https://github.com/graphia-app/graphia/blob/master/source/app/rendering/opengldebuglogger.cpp#L36 "source/app/rendering/opengldebuglogger.cpp:36"):13 | QOpenGLDebugLogger::messageLogged is not a signal |
 | [updater.cpp:77](https://github.com/graphia-app/graphia/blob/master/source/app/updates/updater.cpp#L77 "source/app/updates/updater.cpp:77"):5 | QNetworkAccessManager::finished is not a signal |
 | [watchdog.cpp:41](https://github.com/graphia-app/graphia/blob/master/source/app/watchdog.cpp#L41 "source/app/watchdog.cpp:41"):5 | QThread::finished is not a signal |
+| <h3>google-explicit-constructor</h3> | <h4>clang-tidy warning</h4> |
+| [qmltabulardataparser.h:100](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/qmltabulardataparser.h#L100 "source/shared/loading/qmltabulardataparser.h:100"):9 | 'operator bool' must be marked explicit to avoid unintentional implicit conversions |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [biopaxfileparser.cpp:109](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/biopaxfileparser.cpp#L109 "source/shared/loading/biopaxfileparser.cpp:109"):49 | use nullptr |
 | [pairwisetxtfileparser.cpp:91](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/pairwisetxtfileparser.cpp#L91 "source/shared/loading/pairwisetxtfileparser.cpp:91"):18 | use nullptr |
@@ -24,3 +28,5 @@
 | [pairwisetxtfileparser.cpp:95](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/pairwisetxtfileparser.cpp#L95 "source/shared/loading/pairwisetxtfileparser.cpp:95"):31 | use nullptr |
 | [performancecounter.cpp:35](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/performancecounter.cpp#L35 "source/shared/utils/performancecounter.cpp:35"):12 | use nullptr |
 | [watchdog.cpp:111](https://github.com/graphia-app/graphia/blob/master/source/app/watchdog.cpp#L111 "source/app/watchdog.cpp:111"):24 | use nullptr |
+| <h3>qstring-arg</h3> | <h4>clazy warning</h4> |
+| [adjacencymatrixfileparser.cpp:408](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/adjacencymatrixfileparser.cpp#L408 "source/shared/loading/adjacencymatrixfileparser.cpp:408"):36 | Use multi-arg instead |

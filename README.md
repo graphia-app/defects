@@ -1,8 +1,7 @@
 # Summary
-| Code | Severity | Tool | Count (22) |
+| Code | Severity | Tool | Count (16) |
 |---|---|---|---|
 | connect-non-signal | warning | clazy | 10 |
-| cppcoreguidelines-macro-usage | warning | clang-tidy | 6 |
 | modernize-use-nullptr | warning | clang-tidy | 6 |
 # Details
 | File:Line:Column | Message |
@@ -18,13 +17,6 @@
 | [opengldebuglogger.cpp:36](https://github.com/graphia-app/graphia/blob/static-block/source/app/rendering/opengldebuglogger.cpp#L36 "source/app/rendering/opengldebuglogger.cpp:36"):13 | QOpenGLDebugLogger::messageLogged is not a signal |
 | [updater.cpp:77](https://github.com/graphia-app/graphia/blob/static-block/source/app/updates/updater.cpp#L77 "source/app/updates/updater.cpp:77"):5 | QNetworkAccessManager::finished is not a signal |
 | [watchdog.cpp:41](https://github.com/graphia-app/graphia/blob/static-block/source/app/watchdog.cpp#L41 "source/app/watchdog.cpp:41"):5 | QThread::finished is not a signal |
-| <h3>cppcoreguidelines-macro-usage</h3> | <h4>clang-tidy warning</h4> |
-| [static_block.h:25](https://github.com/graphia-app/graphia/blob/static-block/source/shared/utils/static_block.h#L25 "source/shared/utils/static_block.h:25"):9 | function-like macro 'STATIC_BLOCK_ID_CONCAT' used; consider a 'constexpr' template function |
-| [static_block.h:26](https://github.com/graphia-app/graphia/blob/static-block/source/shared/utils/static_block.h#L26 "source/shared/utils/static_block.h:26"):9 | function-like macro 'STATIC_BLOCK_ID_EXPAND' used; consider a 'constexpr' template function |
-| [static_block.h:27](https://github.com/graphia-app/graphia/blob/static-block/source/shared/utils/static_block.h#L27 "source/shared/utils/static_block.h:27"):9 | macro 'STATIC_BLOCK_ID' used to declare a constant; consider using a 'constexpr' constant |
-| [static_block.h:29](https://github.com/graphia-app/graphia/blob/static-block/source/shared/utils/static_block.h#L29 "source/shared/utils/static_block.h:29"):9 | function-like macro 'STATIC_BLOCK_2' used; consider a 'constexpr' template function |
-| [static_block.h:51](https://github.com/graphia-app/graphia/blob/static-block/source/shared/utils/static_block.h#L51 "source/shared/utils/static_block.h:51"):9 | function-like macro 'STATIC_BLOCK_1' used; consider a 'constexpr' template function |
-| [static_block.h:57](https://github.com/graphia-app/graphia/blob/static-block/source/shared/utils/static_block.h#L57 "source/shared/utils/static_block.h:57"):9 | macro 'static_block' used to declare a constant; consider using a 'constexpr' constant |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [biopaxfileparser.cpp:109](https://github.com/graphia-app/graphia/blob/static-block/source/shared/loading/biopaxfileparser.cpp#L109 "source/shared/loading/biopaxfileparser.cpp:109"):49 | use nullptr |
 | [pairwisetxtfileparser.cpp:91](https://github.com/graphia-app/graphia/blob/static-block/source/shared/loading/pairwisetxtfileparser.cpp#L91 "source/shared/loading/pairwisetxtfileparser.cpp:91"):18 | use nullptr |

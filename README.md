@@ -1,16 +1,11 @@
 # Summary
-| Code | Severity | Tool | Count (50) |
+| Code | Severity | Tool | Count (47) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
 | connect-non-signal | warning | clazy | 10 |
-| android-cloexec-open | warning | clang-tidy | 2 |
-| modernize-deprecated-headers | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
-| <h3>android-cloexec-open</h3> | <h4>clang-tidy warning</h4> |
-| [main.cpp:159](https://github.com/graphia-app/graphia/blob/capture-console-output/source/app/main.cpp#L159 "source/app/main.cpp:159"):66 | 'open' should use O_CLOEXEC where possible |
-| [main.cpp:160](https://github.com/graphia-app/graphia/blob/capture-console-output/source/app/main.cpp#L160 "source/app/main.cpp:160"):66 | 'open' should use O_CLOEXEC where possible |
 | <h3>connect-non-signal</h3> | <h4>clazy warning</h4> |
 | [downloadqueue.cpp:33](https://github.com/graphia-app/graphia/blob/capture-console-output/source/shared/utils/downloadqueue.cpp#L33 "source/shared/utils/downloadqueue.cpp:33"):5 | QNetworkAccessManager::finished is not a signal |
 | [graphconsistencychecker.cpp:44](https://github.com/graphia-app/graphia/blob/capture-console-output/source/app/graph/graphconsistencychecker.cpp#L44 "source/app/graph/graphconsistencychecker.cpp:44"):9 | Graph::graphChanged is not a signal |
@@ -22,8 +17,6 @@
 | [opengldebuglogger.cpp:36](https://github.com/graphia-app/graphia/blob/capture-console-output/source/app/rendering/opengldebuglogger.cpp#L36 "source/app/rendering/opengldebuglogger.cpp:36"):13 | QOpenGLDebugLogger::messageLogged is not a signal |
 | [updater.cpp:77](https://github.com/graphia-app/graphia/blob/capture-console-output/source/app/updates/updater.cpp#L77 "source/app/updates/updater.cpp:77"):5 | QNetworkAccessManager::finished is not a signal |
 | [watchdog.cpp:41](https://github.com/graphia-app/graphia/blob/capture-console-output/source/app/watchdog.cpp#L41 "source/app/watchdog.cpp:41"):5 | QThread::finished is not a signal |
-| <h3>modernize-deprecated-headers</h3> | <h4>clang-tidy warning</h4> |
-| [main.cpp:46](https://github.com/graphia-app/graphia/blob/capture-console-output/source/app/main.cpp#L46 "source/app/main.cpp:46"):10 | inclusion of deprecated C++ header 'stdlib.h'; consider using 'cstdlib' instead |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [biopaxfileparser.cpp:109](https://github.com/graphia-app/graphia/blob/capture-console-output/source/shared/loading/biopaxfileparser.cpp#L109 "source/shared/loading/biopaxfileparser.cpp:109"):49 | use nullptr |
 | [circlepackcomponentlayout.cpp:209](https://github.com/graphia-app/graphia/blob/capture-console-output/source/app/layout/circlepackcomponentlayout.cpp#L209 "source/app/layout/circlepackcomponentlayout.cpp:209"):22 | use nullptr |

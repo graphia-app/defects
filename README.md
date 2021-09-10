@@ -1,13 +1,14 @@
 # Summary
-| Code | Severity | Tool | Count (47) |
+| Code | Severity | Tool | Count (48) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
 | connect-non-signal | warning | clazy | 10 |
+| range-loop | warning | clazy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
 | <h3>connect-non-signal</h3> | <h4>clazy warning</h4> |
-| [downloadqueue.cpp:33](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/downloadqueue.cpp#L33 "source/shared/utils/downloadqueue.cpp:33"):5 | QNetworkAccessManager::finished is not a signal |
+| [downloadqueue.cpp:34](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/downloadqueue.cpp#L34 "source/shared/utils/downloadqueue.cpp:34"):5 | QNetworkAccessManager::finished is not a signal |
 | [graphconsistencychecker.cpp:44](https://github.com/graphia-app/graphia/blob/master/source/app/graph/graphconsistencychecker.cpp#L44 "source/app/graph/graphconsistencychecker.cpp:44"):9 | Graph::graphChanged is not a signal |
 | [graphmodel.cpp:223](https://github.com/graphia-app/graphia/blob/master/source/app/graph/graphmodel.cpp#L223 "source/app/graph/graphmodel.cpp:223"):5 | UserData::vectorValuesChanged is not a signal |
 | [graphmodel.cpp:233](https://github.com/graphia-app/graphia/blob/master/source/app/graph/graphmodel.cpp#L233 "source/app/graph/graphmodel.cpp:233"):5 | UserData::vectorValuesChanged is not a signal |
@@ -55,3 +56,5 @@
 | [undirectededge.h:42](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/undirectededge.h#L42 "source/shared/graph/undirectededge.h:42"):23 | use nullptr |
 | [undirectededge.h:44](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/undirectededge.h#L44 "source/shared/graph/undirectededge.h:44"):19 | use nullptr |
 | [watchdog.cpp:111](https://github.com/graphia-app/graphia/blob/master/source/app/watchdog.cpp#L111 "source/app/watchdog.cpp:111"):24 | use nullptr |
+| <h3>range-loop</h3> | <h4>clazy warning</h4> |
+| [downloadqueue.cpp:171](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/downloadqueue.cpp#L171 "source/shared/utils/downloadqueue.cpp:171"):13 | c++11 range-loop might detach Qt container (QList) |

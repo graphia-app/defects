@@ -1,15 +1,11 @@
 # Summary
-| Code | Severity | Tool | Count (48) |
+| Code | Severity | Tool | Count (46) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
 | connect-non-signal | warning | clazy | 9 |
-| clang-diagnostic-unused-lambda-capture | warning | clang-tidy | 1 |
-| unused-lambda-capture | warning | generic | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
-| <h3>clang-diagnostic-unused-lambda-capture</h3> | <h4>clang-tidy warning</h4> |
-| [downloadqueue.cpp:215](https://github.com/graphia-app/graphia/blob/downloadqueue-alterations/source/shared/utils/downloadqueue.cpp#L215 "source/shared/utils/downloadqueue.cpp:215"):18 | lambda capture 'reply' is not used |
 | <h3>connect-non-signal</h3> | <h4>clazy warning</h4> |
 | [graphconsistencychecker.cpp:44](https://github.com/graphia-app/graphia/blob/downloadqueue-alterations/source/app/graph/graphconsistencychecker.cpp#L44 "source/app/graph/graphconsistencychecker.cpp:44"):9 | Graph::graphChanged is not a signal |
 | [graphmodel.cpp:223](https://github.com/graphia-app/graphia/blob/downloadqueue-alterations/source/app/graph/graphmodel.cpp#L223 "source/app/graph/graphmodel.cpp:223"):5 | UserData::vectorValuesChanged is not a signal |
@@ -58,5 +54,3 @@
 | [undirectededge.h:42](https://github.com/graphia-app/graphia/blob/downloadqueue-alterations/source/shared/graph/undirectededge.h#L42 "source/shared/graph/undirectededge.h:42"):23 | use nullptr |
 | [undirectededge.h:44](https://github.com/graphia-app/graphia/blob/downloadqueue-alterations/source/shared/graph/undirectededge.h#L44 "source/shared/graph/undirectededge.h:44"):19 | use nullptr |
 | [watchdog.cpp:111](https://github.com/graphia-app/graphia/blob/downloadqueue-alterations/source/app/watchdog.cpp#L111 "source/app/watchdog.cpp:111"):24 | use nullptr |
-| <h3>unused-lambda-capture</h3> | <h4>generic warning</h4> |
-| [downloadqueue.cpp:215](https://github.com/graphia-app/graphia/blob/downloadqueue-alterations/source/shared/utils/downloadqueue.cpp#L215 "source/shared/utils/downloadqueue.cpp:215"):18 | lambda capture 'reply' is not used |

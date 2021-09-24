@@ -32,9 +32,9 @@
 | [graphmodel.cpp:223](https://github.com/graphia-app/graphia/blob/master/source/app/graph/graphmodel.cpp#L223 "source/app/graph/graphmodel.cpp:223"):5 | UserData::vectorValuesChanged is not a signal |
 | [graphmodel.cpp:233](https://github.com/graphia-app/graphia/blob/master/source/app/graph/graphmodel.cpp#L233 "source/app/graph/graphmodel.cpp:233"):5 | UserData::vectorValuesChanged is not a signal |
 | [graphoverviewscene.cpp:68](https://github.com/graphia-app/graphia/blob/master/source/app/rendering/graphoverviewscene.cpp#L68 "source/app/rendering/graphoverviewscene.cpp:68"):5 | GraphModel::visualsChanged is not a signal |
-| [graphrenderer.cpp:109](https://github.com/graphia-app/graphia/blob/master/source/app/rendering/graphrenderer.cpp#L109 "source/app/rendering/graphrenderer.cpp:109"):5 | GraphModel::visualsWillChange is not a signal |
-| [graphrenderer.cpp:114](https://github.com/graphia-app/graphia/blob/master/source/app/rendering/graphrenderer.cpp#L114 "source/app/rendering/graphrenderer.cpp:114"):5 | GraphModel::visualsChanged is not a signal |
-| [opengldebuglogger.cpp:36](https://github.com/graphia-app/graphia/blob/master/source/app/rendering/opengldebuglogger.cpp#L36 "source/app/rendering/opengldebuglogger.cpp:36"):13 | QOpenGLDebugLogger::messageLogged is not a signal |
+| [graphrenderer.cpp:107](https://github.com/graphia-app/graphia/blob/master/source/app/rendering/graphrenderer.cpp#L107 "source/app/rendering/graphrenderer.cpp:107"):5 | GraphModel::visualsWillChange is not a signal |
+| [graphrenderer.cpp:112](https://github.com/graphia-app/graphia/blob/master/source/app/rendering/graphrenderer.cpp#L112 "source/app/rendering/graphrenderer.cpp:112"):5 | GraphModel::visualsChanged is not a signal |
+| [opengldebuglogger.cpp:35](https://github.com/graphia-app/graphia/blob/master/source/app/rendering/opengldebuglogger.cpp#L35 "source/app/rendering/opengldebuglogger.cpp:35"):13 | QOpenGLDebugLogger::messageLogged is not a signal |
 | [updater.cpp:77](https://github.com/graphia-app/graphia/blob/master/source/app/updates/updater.cpp#L77 "source/app/updates/updater.cpp:77"):5 | QNetworkAccessManager::finished is not a signal |
 | [watchdog.cpp:43](https://github.com/graphia-app/graphia/blob/master/source/app/watchdog.cpp#L43 "source/app/watchdog.cpp:43"):5 | QThread::finished is not a signal |
 | <h3>incorrect-emit</h3> | <h4>clazy warning</h4> |

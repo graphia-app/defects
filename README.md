@@ -1,10 +1,9 @@
 # Summary
-| Code | Severity | Tool | Count (71) |
+| Code | Severity | Tool | Count (70) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
 | connect-non-signal | warning | clazy | 29 |
 | incorrect-emit | warning | clazy | 4 |
-| performance-unnecessary-value-param | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -81,5 +80,3 @@
 | [undirectededge.h:42](https://github.com/graphia-app/graphia/blob/annotation-iqr-colour/source/shared/graph/undirectededge.h#L42 "source/shared/graph/undirectededge.h:42"):23 | use nullptr |
 | [undirectededge.h:44](https://github.com/graphia-app/graphia/blob/annotation-iqr-colour/source/shared/graph/undirectededge.h#L44 "source/shared/graph/undirectededge.h:44"):19 | use nullptr |
 | [watchdog.cpp:114](https://github.com/graphia-app/graphia/blob/annotation-iqr-colour/source/app/watchdog.cpp#L114 "source/app/watchdog.cpp:114"):24 | use nullptr |
-| <h3>performance-unnecessary-value-param</h3> | <h4>clang-tidy warning</h4> |
-| [correlationplotitem_continuous.cpp:395](https://github.com/graphia-app/graphia/blob/annotation-iqr-colour/source/plugins/correlation/correlationplotitem_continuous.cpp#L395 "source/plugins/correlation/correlationplotitem_continuous.cpp:395"):51 | the parameter 'color' is copied for each invocation but only used as a const reference; consider making it a const reference |

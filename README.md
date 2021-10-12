@@ -8,26 +8,26 @@
 | File:Line:Column | Message |
 |---|---|
 | <h3>connect-non-signal</h3> | <h4>clazy warning</h4> |
-| [document.cpp:862](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L862 "source/app/ui/document.cpp:862"):5 | CommandManager::started is not a signal |
-| [document.cpp:863](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L863 "source/app/ui/document.cpp:863"):5 | CommandManager::started is not a signal |
+| [document.cpp:864](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L864 "source/app/ui/document.cpp:864"):5 | CommandManager::started is not a signal |
 | [document.cpp:865](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L865 "source/app/ui/document.cpp:865"):5 | CommandManager::started is not a signal |
-| [document.cpp:866](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L866 "source/app/ui/document.cpp:866"):5 | CommandManager::finished is not a signal |
+| [document.cpp:867](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L867 "source/app/ui/document.cpp:867"):5 | CommandManager::started is not a signal |
 | [document.cpp:868](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L868 "source/app/ui/document.cpp:868"):5 | CommandManager::finished is not a signal |
-| [document.cpp:869](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L869 "source/app/ui/document.cpp:869"):5 | CommandManager::finished is not a signal |
-| [document.cpp:883](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L883 "source/app/ui/document.cpp:883"):5 | CommandManager::commandProgressChanged is not a signal |
-| [document.cpp:884](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L884 "source/app/ui/document.cpp:884"):5 | CommandManager::commandVerbChanged is not a signal |
-| [document.cpp:885](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L885 "source/app/ui/document.cpp:885"):5 | CommandManager::commandIsCancellableChanged is not a signal |
-| [document.cpp:886](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L886 "source/app/ui/document.cpp:886"):5 | CommandManager::commandIsCancellingChanged is not a signal |
-| [document.cpp:888](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L888 "source/app/ui/document.cpp:888"):5 | CommandManager::finished is not a signal |
-| [document.cpp:889](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L889 "source/app/ui/document.cpp:889"):5 | CommandManager::finished is not a signal |
+| [document.cpp:870](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L870 "source/app/ui/document.cpp:870"):5 | CommandManager::finished is not a signal |
+| [document.cpp:871](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L871 "source/app/ui/document.cpp:871"):5 | CommandManager::finished is not a signal |
+| [document.cpp:885](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L885 "source/app/ui/document.cpp:885"):5 | CommandManager::commandProgressChanged is not a signal |
+| [document.cpp:886](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L886 "source/app/ui/document.cpp:886"):5 | CommandManager::commandVerbChanged is not a signal |
+| [document.cpp:887](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L887 "source/app/ui/document.cpp:887"):5 | CommandManager::commandIsCancellableChanged is not a signal |
+| [document.cpp:888](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L888 "source/app/ui/document.cpp:888"):5 | CommandManager::commandIsCancellingChanged is not a signal |
 | [document.cpp:890](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L890 "source/app/ui/document.cpp:890"):5 | CommandManager::finished is not a signal |
 | [document.cpp:891](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L891 "source/app/ui/document.cpp:891"):5 | CommandManager::finished is not a signal |
 | [document.cpp:892](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L892 "source/app/ui/document.cpp:892"):5 | CommandManager::finished is not a signal |
-| [document.cpp:893](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L893 "source/app/ui/document.cpp:893"):5 | CommandManager::commandCompleted is not a signal |
-| [document.cpp:902](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L902 "source/app/ui/document.cpp:902"):5 | CommandManager::commandStackCleared is not a signal |
-| [document.cpp:903](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L903 "source/app/ui/document.cpp:903"):5 | CommandManager::commandStackCleared is not a signal |
+| [document.cpp:893](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L893 "source/app/ui/document.cpp:893"):5 | CommandManager::finished is not a signal |
+| [document.cpp:894](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L894 "source/app/ui/document.cpp:894"):5 | CommandManager::finished is not a signal |
+| [document.cpp:895](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L895 "source/app/ui/document.cpp:895"):5 | CommandManager::commandCompleted is not a signal |
 | [document.cpp:904](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L904 "source/app/ui/document.cpp:904"):5 | CommandManager::commandStackCleared is not a signal |
 | [document.cpp:905](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L905 "source/app/ui/document.cpp:905"):5 | CommandManager::commandStackCleared is not a signal |
+| [document.cpp:906](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L906 "source/app/ui/document.cpp:906"):5 | CommandManager::commandStackCleared is not a signal |
+| [document.cpp:907](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L907 "source/app/ui/document.cpp:907"):5 | CommandManager::commandStackCleared is not a signal |
 | [graphconsistencychecker.cpp:44](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/graphconsistencychecker.cpp#L44 "source/app/graph/graphconsistencychecker.cpp:44"):9 | Graph::graphChanged is not a signal |
 | [graphmodel.cpp:223](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/graphmodel.cpp#L223 "source/app/graph/graphmodel.cpp:223"):5 | UserData::vectorValuesChanged is not a signal |
 | [graphmodel.cpp:233](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/graphmodel.cpp#L233 "source/app/graph/graphmodel.cpp:233"):5 | UserData::vectorValuesChanged is not a signal |
@@ -48,8 +48,8 @@
 | [componentmanager.cpp:204](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/componentmanager.cpp#L204 "source/app/graph/componentmanager.cpp:204"):34 | use nullptr |
 | [componentmanager.cpp:213](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/componentmanager.cpp#L213 "source/app/graph/componentmanager.cpp:213"):34 | use nullptr |
 | [componentmanager.cpp:271](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/componentmanager.cpp#L271 "source/app/graph/componentmanager.cpp:271"):22 | use nullptr |
-| [document.cpp:1738](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L1738 "source/app/ui/document.cpp:1738"):22 | use nullptr |
-| [document.cpp:1740](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L1740 "source/app/ui/document.cpp:1740"):29 | use nullptr |
+| [document.cpp:1740](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L1740 "source/app/ui/document.cpp:1740"):22 | use nullptr |
+| [document.cpp:1742](https://github.com/graphia-app/graphia/blob/debug/source/app/ui/document.cpp#L1742 "source/app/ui/document.cpp:1742"):29 | use nullptr |
 | [elementid.h:60](https://github.com/graphia-app/graphia/blob/debug/source/shared/graph/elementid.h#L60 "source/shared/graph/elementid.h:60"):63 | use nullptr |
 | [graph.cpp:258](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/graph.cpp#L258 "source/app/graph/graph.cpp:258"):15 | use nullptr |
 | [graph.cpp:269](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/graph.cpp#L269 "source/app/graph/graph.cpp:269"):15 | use nullptr |

@@ -1,9 +1,11 @@
 # Summary
-| Code | Severity | Tool | Count (70) |
+| Code | Severity | Tool | Count (72) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
 | connect-non-signal | warning | clazy | 29 |
 | incorrect-emit | warning | clazy | 4 |
+| detaching-temporary | warning | clazy | 1 |
+| qstring-allocations | warning | clazy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -37,6 +39,8 @@
 | [opengldebuglogger.cpp:35](https://github.com/graphia-app/graphia/blob/master/source/app/rendering/opengldebuglogger.cpp#L35 "source/app/rendering/opengldebuglogger.cpp:35"):13 | QOpenGLDebugLogger::messageLogged is not a signal |
 | [updater.cpp:77](https://github.com/graphia-app/graphia/blob/master/source/app/updates/updater.cpp#L77 "source/app/updates/updater.cpp:77"):5 | QNetworkAccessManager::finished is not a signal |
 | [watchdog.cpp:43](https://github.com/graphia-app/graphia/blob/master/source/app/watchdog.cpp#L43 "source/app/watchdog.cpp:43"):5 | QThread::finished is not a signal |
+| <h3>detaching-temporary</h3> | <h4>clazy warning</h4> |
+| [importattributeskeydetection.cpp:64](https://github.com/graphia-app/graphia/blob/master/source/app/loading/importattributeskeydetection.cpp#L64 "source/app/loading/importattributeskeydetection.cpp:64"):21 | Don't call QMap::operator[]() on temporary |
 | <h3>incorrect-emit</h3> | <h4>clazy warning</h4> |
 | [commandmanager.h:100](https://github.com/graphia-app/graphia/blob/master/source/app/commands/commandmanager.h#L100 "source/app/commands/commandmanager.h:100"):14 | Emit keyword being used with non-signal CommandManager::commandIsCancellableChanged |
 | [commandmanager.h:110](https://github.com/graphia-app/graphia/blob/master/source/app/commands/commandmanager.h#L110 "source/app/commands/commandmanager.h:110"):18 | Emit keyword being used with non-signal CommandManager::started |
@@ -80,3 +84,5 @@
 | [undirectededge.h:42](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/undirectededge.h#L42 "source/shared/graph/undirectededge.h:42"):23 | use nullptr |
 | [undirectededge.h:44](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/undirectededge.h#L44 "source/shared/graph/undirectededge.h:44"):19 | use nullptr |
 | [watchdog.cpp:114](https://github.com/graphia-app/graphia/blob/master/source/app/watchdog.cpp#L114 "source/app/watchdog.cpp:114"):24 | use nullptr |
+| <h3>qstring-allocations</h3> | <h4>clazy warning</h4> |
+| [importattributeskeydetection.cpp:64](https://github.com/graphia-app/graphia/blob/master/source/app/loading/importattributeskeydetection.cpp#L64 "source/app/loading/importattributeskeydetection.cpp:64"):57 | QString(const char*) being called |

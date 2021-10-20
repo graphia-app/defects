@@ -33,8 +33,8 @@
 | [graphmodel.cpp:223](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/graphmodel.cpp#L223 "source/app/graph/graphmodel.cpp:223"):5 | UserData::vectorValuesChanged is not a signal |
 | [graphmodel.cpp:233](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/graphmodel.cpp#L233 "source/app/graph/graphmodel.cpp:233"):5 | UserData::vectorValuesChanged is not a signal |
 | [graphoverviewscene.cpp:68](https://github.com/graphia-app/graphia/blob/debug/source/app/rendering/graphoverviewscene.cpp#L68 "source/app/rendering/graphoverviewscene.cpp:68"):5 | GraphModel::visualsChanged is not a signal |
-| [graphrenderer.cpp:107](https://github.com/graphia-app/graphia/blob/debug/source/app/rendering/graphrenderer.cpp#L107 "source/app/rendering/graphrenderer.cpp:107"):5 | GraphModel::visualsWillChange is not a signal |
-| [graphrenderer.cpp:112](https://github.com/graphia-app/graphia/blob/debug/source/app/rendering/graphrenderer.cpp#L112 "source/app/rendering/graphrenderer.cpp:112"):5 | GraphModel::visualsChanged is not a signal |
+| [graphrenderer.cpp:108](https://github.com/graphia-app/graphia/blob/debug/source/app/rendering/graphrenderer.cpp#L108 "source/app/rendering/graphrenderer.cpp:108"):5 | GraphModel::visualsWillChange is not a signal |
+| [graphrenderer.cpp:113](https://github.com/graphia-app/graphia/blob/debug/source/app/rendering/graphrenderer.cpp#L113 "source/app/rendering/graphrenderer.cpp:113"):5 | GraphModel::visualsChanged is not a signal |
 | [opengldebuglogger.cpp:35](https://github.com/graphia-app/graphia/blob/debug/source/app/rendering/opengldebuglogger.cpp#L35 "source/app/rendering/opengldebuglogger.cpp:35"):13 | QOpenGLDebugLogger::messageLogged is not a signal |
 | [updater.cpp:77](https://github.com/graphia-app/graphia/blob/debug/source/app/updates/updater.cpp#L77 "source/app/updates/updater.cpp:77"):5 | QNetworkAccessManager::finished is not a signal |
 | [watchdog.cpp:43](https://github.com/graphia-app/graphia/blob/debug/source/app/watchdog.cpp#L43 "source/app/watchdog.cpp:43"):5 | QThread::finished is not a signal |
@@ -45,7 +45,7 @@
 | [commandmanager.h:99](https://github.com/graphia-app/graphia/blob/debug/source/app/commands/commandmanager.h#L99 "source/app/commands/commandmanager.h:99"):14 | Emit keyword being used with non-signal CommandManager::commandVerbChanged |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [biopaxfileparser.cpp:109](https://github.com/graphia-app/graphia/blob/debug/source/shared/loading/biopaxfileparser.cpp#L109 "source/shared/loading/biopaxfileparser.cpp:109"):49 | use nullptr |
-| [circlepackcomponentlayout.cpp:209](https://github.com/graphia-app/graphia/blob/debug/source/app/layout/circlepackcomponentlayout.cpp#L209 "source/app/layout/circlepackcomponentlayout.cpp:209"):22 | use nullptr |
+| [circlepackcomponentlayout.cpp:211](https://github.com/graphia-app/graphia/blob/debug/source/app/layout/circlepackcomponentlayout.cpp#L211 "source/app/layout/circlepackcomponentlayout.cpp:211"):22 | use nullptr |
 | [componentmanager.cpp:204](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/componentmanager.cpp#L204 "source/app/graph/componentmanager.cpp:204"):34 | use nullptr |
 | [componentmanager.cpp:213](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/componentmanager.cpp#L213 "source/app/graph/componentmanager.cpp:213"):34 | use nullptr |
 | [componentmanager.cpp:271](https://github.com/graphia-app/graphia/blob/debug/source/app/graph/componentmanager.cpp#L271 "source/app/graph/componentmanager.cpp:271"):22 | use nullptr |
@@ -82,5 +82,5 @@
 | [undirectededge.h:44](https://github.com/graphia-app/graphia/blob/debug/source/shared/graph/undirectededge.h#L44 "source/shared/graph/undirectededge.h:44"):19 | use nullptr |
 | [watchdog.cpp:114](https://github.com/graphia-app/graphia/blob/debug/source/app/watchdog.cpp#L114 "source/app/watchdog.cpp:114"):24 | use nullptr |
 | <h3>qstring-allocations</h3> | <h4>clazy warning</h4> |
-| [main.cpp:176](https://github.com/graphia-app/graphia/blob/debug/source/app/main.cpp#L176 "source/app/main.cpp:176"):33 | QString(const char*) being called |
-| [main.cpp:176](https://github.com/graphia-app/graphia/blob/debug/source/app/main.cpp#L176 "source/app/main.cpp:176"):33 | FixIt failed, requires manual intervention:  Can't use QStringLiteral in macro |
+| [main.cpp:203](https://github.com/graphia-app/graphia/blob/debug/source/app/main.cpp#L203 "source/app/main.cpp:203"):33 | QString(const char*) being called |
+| [main.cpp:203](https://github.com/graphia-app/graphia/blob/debug/source/app/main.cpp#L203 "source/app/main.cpp:203"):33 | FixIt failed, requires manual intervention:  Can't use QStringLiteral in macro |

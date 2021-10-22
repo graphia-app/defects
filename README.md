@@ -1,10 +1,9 @@
 # Summary
-| Code | Severity | Tool | Count (72) |
+| Code | Severity | Tool | Count (70) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
 | connect-non-signal | warning | clazy | 29 |
 | incorrect-emit | warning | clazy | 4 |
-| qstring-allocations | warning | clazy | 2 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -81,6 +80,3 @@
 | [undirectededge.h:42](https://github.com/graphia-app/graphia/blob/debug/source/shared/graph/undirectededge.h#L42 "source/shared/graph/undirectededge.h:42"):23 | use nullptr |
 | [undirectededge.h:44](https://github.com/graphia-app/graphia/blob/debug/source/shared/graph/undirectededge.h#L44 "source/shared/graph/undirectededge.h:44"):19 | use nullptr |
 | [watchdog.cpp:114](https://github.com/graphia-app/graphia/blob/debug/source/app/watchdog.cpp#L114 "source/app/watchdog.cpp:114"):24 | use nullptr |
-| <h3>qstring-allocations</h3> | <h4>clazy warning</h4> |
-| [main.cpp:203](https://github.com/graphia-app/graphia/blob/debug/source/app/main.cpp#L203 "source/app/main.cpp:203"):33 | QString(const char*) being called |
-| [main.cpp:203](https://github.com/graphia-app/graphia/blob/debug/source/app/main.cpp#L203 "source/app/main.cpp:203"):33 | FixIt failed, requires manual intervention:  Can't use QStringLiteral in macro |

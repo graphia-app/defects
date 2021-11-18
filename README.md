@@ -1,12 +1,19 @@
 # Summary
-| Code | Severity | Tool | Count (70) |
+| Code | Severity | Tool | Count (82) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
 | connect-non-signal | warning | clazy | 29 |
+| unused-parameter | warning | generic | 8 |
+| clang-diagnostic-unused-parameter | warning | clang-tidy | 4 |
 | incorrect-emit | warning | clazy | 4 |
 # Details
 | File:Line:Column | Message |
 |---|---|
+| <h3>clang-diagnostic-unused-parameter</h3> | <h4>clang-tidy warning</h4> |
+| [editattributetablemodel.cpp:25](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L25 "source/app/attributes/editattributetablemodel.cpp:25"):58 | unused parameter 'parent' |
+| [editattributetablemodel.cpp:30](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L30 "source/app/attributes/editattributetablemodel.cpp:30"):61 | unused parameter 'parent' |
+| [editattributetablemodel.cpp:35](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L35 "source/app/attributes/editattributetablemodel.cpp:35"):59 | unused parameter 'index' |
+| [editattributetablemodel.cpp:35](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L35 "source/app/attributes/editattributetablemodel.cpp:35"):70 | unused parameter 'role' |
 | <h3>connect-non-signal</h3> | <h4>clazy warning</h4> |
 | [document.cpp:865](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/ui/document.cpp#L865 "source/app/ui/document.cpp:865"):5 | CommandManager::started is not a signal |
 | [document.cpp:866](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/ui/document.cpp#L866 "source/app/ui/document.cpp:866"):5 | CommandManager::started is not a signal |
@@ -80,3 +87,12 @@
 | [undirectededge.h:42](https://github.com/graphia-app/graphia/blob/clone-attribute/source/shared/graph/undirectededge.h#L42 "source/shared/graph/undirectededge.h:42"):23 | use nullptr |
 | [undirectededge.h:44](https://github.com/graphia-app/graphia/blob/clone-attribute/source/shared/graph/undirectededge.h#L44 "source/shared/graph/undirectededge.h:44"):19 | use nullptr |
 | [watchdog.cpp:114](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/watchdog.cpp#L114 "source/app/watchdog.cpp:114"):24 | use nullptr |
+| <h3>unused-parameter</h3> | <h4>generic warning</h4> |
+| [editattributetablemodel.cpp:25](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L25 "source/app/attributes/editattributetablemodel.cpp:25"):58 | unused parameter 'parent' |
+| [editattributetablemodel.cpp:25](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L25 "source/app/attributes/editattributetablemodel.cpp:25"):58 | unused parameter ‘parent’ |
+| [editattributetablemodel.cpp:30](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L30 "source/app/attributes/editattributetablemodel.cpp:30"):61 | unused parameter 'parent' |
+| [editattributetablemodel.cpp:30](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L30 "source/app/attributes/editattributetablemodel.cpp:30"):61 | unused parameter ‘parent’ |
+| [editattributetablemodel.cpp:35](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L35 "source/app/attributes/editattributetablemodel.cpp:35"):59 | unused parameter 'index' |
+| [editattributetablemodel.cpp:35](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L35 "source/app/attributes/editattributetablemodel.cpp:35"):59 | unused parameter ‘index’ |
+| [editattributetablemodel.cpp:35](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L35 "source/app/attributes/editattributetablemodel.cpp:35"):70 | unused parameter 'role' |
+| [editattributetablemodel.cpp:35](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L35 "source/app/attributes/editattributetablemodel.cpp:35"):70 | unused parameter ‘role’ |

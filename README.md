@@ -1,7 +1,8 @@
 # Summary
-| Code | Severity | Tool | Count (38) |
+| Code | Severity | Tool | Count (41) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
+| readability-qualified-auto | warning | clang-tidy | 3 |
 | readability-else-after-return | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
@@ -12,8 +13,8 @@
 | [componentmanager.cpp:204](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/graph/componentmanager.cpp#L204 "source/app/graph/componentmanager.cpp:204"):34 | use nullptr |
 | [componentmanager.cpp:213](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/graph/componentmanager.cpp#L213 "source/app/graph/componentmanager.cpp:213"):34 | use nullptr |
 | [componentmanager.cpp:271](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/graph/componentmanager.cpp#L271 "source/app/graph/componentmanager.cpp:271"):22 | use nullptr |
-| [document.cpp:1741](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/ui/document.cpp#L1741 "source/app/ui/document.cpp:1741"):22 | use nullptr |
-| [document.cpp:1743](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/ui/document.cpp#L1743 "source/app/ui/document.cpp:1743"):29 | use nullptr |
+| [document.cpp:1743](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/ui/document.cpp#L1743 "source/app/ui/document.cpp:1743"):22 | use nullptr |
+| [document.cpp:1745](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/ui/document.cpp#L1745 "source/app/ui/document.cpp:1745"):29 | use nullptr |
 | [elementid.h:60](https://github.com/graphia-app/graphia/blob/clone-attribute/source/shared/graph/elementid.h#L60 "source/shared/graph/elementid.h:60"):63 | use nullptr |
 | [graph.cpp:258](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/graph/graph.cpp#L258 "source/app/graph/graph.cpp:258"):15 | use nullptr |
 | [graph.cpp:269](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/graph/graph.cpp#L269 "source/app/graph/graph.cpp:269"):15 | use nullptr |
@@ -46,3 +47,7 @@
 | [watchdog.cpp:114](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/watchdog.cpp#L114 "source/app/watchdog.cpp:114"):24 | use nullptr |
 | <h3>readability-else-after-return</h3> | <h4>clang-tidy warning</h4> |
 | [editattributetablemodel.cpp:80](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L80 "source/app/attributes/editattributetablemodel.cpp:80"):5 | do not use 'else' after 'return' |
+| <h3>readability-qualified-auto</h3> | <h4>clang-tidy warning</h4> |
+| [editattributecommand.cpp:105](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/commands/editattributecommand.cpp#L105 "source/app/commands/editattributecommand.cpp:105"):5 | 'auto *attribute' can be declared as 'const auto *attribute' |
+| [editattributecommand.cpp:64](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/commands/editattributecommand.cpp#L64 "source/app/commands/editattributecommand.cpp:64"):5 | 'auto *attribute' can be declared as 'const auto *attribute' |
+| [editattributecommand.cpp:78](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/commands/editattributecommand.cpp#L78 "source/app/commands/editattributecommand.cpp:78"):5 | 'auto *attribute' can be declared as 'const auto *attribute' |

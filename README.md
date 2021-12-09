@@ -1,8 +1,7 @@
 # Summary
-| Code | Severity | Tool | Count (41) |
+| Code | Severity | Tool | Count (38) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
-| readability-qualified-auto | warning | clang-tidy | 3 |
 | readability-else-after-return | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
@@ -47,7 +46,3 @@
 | [watchdog.cpp:114](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/watchdog.cpp#L114 "source/app/watchdog.cpp:114"):24 | use nullptr |
 | <h3>readability-else-after-return</h3> | <h4>clang-tidy warning</h4> |
 | [editattributetablemodel.cpp:80](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L80 "source/app/attributes/editattributetablemodel.cpp:80"):5 | do not use 'else' after 'return' |
-| <h3>readability-qualified-auto</h3> | <h4>clang-tidy warning</h4> |
-| [editattributecommand.cpp:105](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/commands/editattributecommand.cpp#L105 "source/app/commands/editattributecommand.cpp:105"):5 | 'auto *attribute' can be declared as 'const auto *attribute' |
-| [editattributecommand.cpp:64](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/commands/editattributecommand.cpp#L64 "source/app/commands/editattributecommand.cpp:64"):5 | 'auto *attribute' can be declared as 'const auto *attribute' |
-| [editattributecommand.cpp:78](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/commands/editattributecommand.cpp#L78 "source/app/commands/editattributecommand.cpp:78"):5 | 'auto *attribute' can be declared as 'const auto *attribute' |

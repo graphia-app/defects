@@ -1,8 +1,7 @@
 # Summary
-| Code | Severity | Tool | Count (38) |
+| Code | Severity | Tool | Count (37) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
-| readability-else-after-return | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -44,5 +43,3 @@
 | [undirectededge.h:42](https://github.com/graphia-app/graphia/blob/clone-attribute/source/shared/graph/undirectededge.h#L42 "source/shared/graph/undirectededge.h:42"):23 | use nullptr |
 | [undirectededge.h:44](https://github.com/graphia-app/graphia/blob/clone-attribute/source/shared/graph/undirectededge.h#L44 "source/shared/graph/undirectededge.h:44"):19 | use nullptr |
 | [watchdog.cpp:114](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/watchdog.cpp#L114 "source/app/watchdog.cpp:114"):24 | use nullptr |
-| <h3>readability-else-after-return</h3> | <h4>clang-tidy warning</h4> |
-| [editattributetablemodel.cpp:81](https://github.com/graphia-app/graphia/blob/clone-attribute/source/app/attributes/editattributetablemodel.cpp#L81 "source/app/attributes/editattributetablemodel.cpp:81"):5 | do not use 'else' after 'return' |

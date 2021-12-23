@@ -11,8 +11,8 @@
 | [componentmanager.cpp:204](https://github.com/graphia-app/graphia/blob/master/source/app/graph/componentmanager.cpp#L204 "source/app/graph/componentmanager.cpp:204"):34 | use nullptr |
 | [componentmanager.cpp:213](https://github.com/graphia-app/graphia/blob/master/source/app/graph/componentmanager.cpp#L213 "source/app/graph/componentmanager.cpp:213"):34 | use nullptr |
 | [componentmanager.cpp:271](https://github.com/graphia-app/graphia/blob/master/source/app/graph/componentmanager.cpp#L271 "source/app/graph/componentmanager.cpp:271"):22 | use nullptr |
-| [document.cpp:1740](https://github.com/graphia-app/graphia/blob/master/source/app/ui/document.cpp#L1740 "source/app/ui/document.cpp:1740"):22 | use nullptr |
-| [document.cpp:1742](https://github.com/graphia-app/graphia/blob/master/source/app/ui/document.cpp#L1742 "source/app/ui/document.cpp:1742"):29 | use nullptr |
+| [document.cpp:1743](https://github.com/graphia-app/graphia/blob/master/source/app/ui/document.cpp#L1743 "source/app/ui/document.cpp:1743"):22 | use nullptr |
+| [document.cpp:1745](https://github.com/graphia-app/graphia/blob/master/source/app/ui/document.cpp#L1745 "source/app/ui/document.cpp:1745"):29 | use nullptr |
 | [elementid.h:60](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/elementid.h#L60 "source/shared/graph/elementid.h:60"):63 | use nullptr |
 | [graph.cpp:258](https://github.com/graphia-app/graphia/blob/master/source/app/graph/graph.cpp#L258 "source/app/graph/graph.cpp:258"):15 | use nullptr |
 | [graph.cpp:269](https://github.com/graphia-app/graphia/blob/master/source/app/graph/graph.cpp#L269 "source/app/graph/graph.cpp:269"):15 | use nullptr |

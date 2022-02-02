@@ -1,7 +1,9 @@
 # Summary
-| Code | Severity | Tool | Count (37) |
+| Code | Severity | Tool | Count (39) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
+| qstring-arg | warning | clazy | 1 |
+| unexpected-flag-enumerator-value | warning | clazy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -43,3 +45,7 @@
 | [undirectededge.h:42](https://github.com/graphia-app/graphia/blob/fix-clazy/source/shared/graph/undirectededge.h#L42 "source/shared/graph/undirectededge.h:42"):23 | use nullptr |
 | [undirectededge.h:44](https://github.com/graphia-app/graphia/blob/fix-clazy/source/shared/graph/undirectededge.h#L44 "source/shared/graph/undirectededge.h:44"):19 | use nullptr |
 | [watchdog.cpp:114](https://github.com/graphia-app/graphia/blob/fix-clazy/source/app/watchdog.cpp#L114 "source/app/watchdog.cpp:114"):24 | use nullptr |
+| <h3>qstring-arg</h3> | <h4>clazy warning</h4> |
+| [editattributecommand.cpp:45](https://github.com/graphia-app/graphia/blob/fix-clazy/source/app/commands/editattributecommand.cpp#L45 "source/app/commands/editattributecommand.cpp:45"):58 | Use multi-arg instead |
+| <h3>unexpected-flag-enumerator-value</h3> | <h4>clazy warning</h4> |
+| [idocument.h:40](https://github.com/graphia-app/graphia/blob/fix-clazy/source/shared/ui/idocument.h#L40 "source/shared/ui/idocument.h:40"):19 | Unexpected non power-of-2 enumerator value: 3 |

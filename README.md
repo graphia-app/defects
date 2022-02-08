@@ -1,7 +1,8 @@
 # Summary
-| Code | Severity | Tool | Count (37) |
+| Code | Severity | Tool | Count (39) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
+| range-loop-detach | warning | clazy | 2 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -43,3 +44,6 @@
 | [undirectededge.h:42](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/undirectededge.h#L42 "source/shared/graph/undirectededge.h:42"):23 | use nullptr |
 | [undirectededge.h:44](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/undirectededge.h#L44 "source/shared/graph/undirectededge.h:44"):19 | use nullptr |
 | [watchdog.cpp:114](https://github.com/graphia-app/graphia/blob/master/source/app/watchdog.cpp#L114 "source/app/watchdog.cpp:114"):24 | use nullptr |
+| <h3>range-loop-detach</h3> | <h4>clazy warning</h4> |
+| [application.cpp:232](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L232 "source/app/application.cpp:232"):9 | c++11 range-loop might detach Qt container (QStringList) |
+| [application.cpp:83](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L83 "source/app/application.cpp:83"):9 | c++11 range-loop might detach Qt container (QStringList) |

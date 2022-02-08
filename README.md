@@ -1,8 +1,9 @@
 # Summary
-| Code | Severity | Tool | Count (39) |
+| Code | Severity | Tool | Count (40) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
 | range-loop-detach | warning | clazy | 2 |
+| readability-make-member-function-const | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -47,3 +48,5 @@
 | <h3>range-loop-detach</h3> | <h4>clazy warning</h4> |
 | [application.cpp:232](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L232 "source/app/application.cpp:232"):9 | c++11 range-loop might detach Qt container (QStringList) |
 | [application.cpp:83](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L83 "source/app/application.cpp:83"):9 | c++11 range-loop might detach Qt container (QStringList) |
+| <h3>readability-make-member-function-const</h3> | <h4>clang-tidy warning</h4> |
+| [qmlutils.h:266](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/qmlutils.h#L266 "source/shared/utils/qmlutils.h:266"):25 | method 'rsaSignatureForString' can be made const |

@@ -1,9 +1,7 @@
 # Summary
-| Code | Severity | Tool | Count (40) |
+| Code | Severity | Tool | Count (37) |
 |---|---|---|---|
 | modernize-use-nullptr | warning | clang-tidy | 37 |
-| range-loop-detach | warning | clazy | 2 |
-| readability-make-member-function-const | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -45,8 +43,3 @@
 | [undirectededge.h:42](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/undirectededge.h#L42 "source/shared/graph/undirectededge.h:42"):23 | use nullptr |
 | [undirectededge.h:44](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/undirectededge.h#L44 "source/shared/graph/undirectededge.h:44"):19 | use nullptr |
 | [watchdog.cpp:114](https://github.com/graphia-app/graphia/blob/master/source/app/watchdog.cpp#L114 "source/app/watchdog.cpp:114"):24 | use nullptr |
-| <h3>range-loop-detach</h3> | <h4>clazy warning</h4> |
-| [application.cpp:232](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L232 "source/app/application.cpp:232"):9 | c++11 range-loop might detach Qt container (QStringList) |
-| [application.cpp:83](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L83 "source/app/application.cpp:83"):9 | c++11 range-loop might detach Qt container (QStringList) |
-| <h3>readability-make-member-function-const</h3> | <h4>clang-tidy warning</h4> |
-| [qmlutils.h:266](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/qmlutils.h#L266 "source/shared/utils/qmlutils.h:266"):25 | method 'rsaSignatureForString' can be made const |

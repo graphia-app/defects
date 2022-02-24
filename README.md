@@ -1,7 +1,7 @@
 # Summary
-| Code | Severity | Tool | Count (37) |
+| Code | Severity | Tool | Count (35) |
 |---|---|---|---|
-| modernize-use-nullptr | warning | clang-tidy | 37 |
+| modernize-use-nullptr | warning | clang-tidy | 35 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -33,10 +33,8 @@
 | [mutablegraph.cpp:616](https://github.com/graphia-app/graphia/blob/master/source/app/graph/mutablegraph.cpp#L616 "source/app/graph/mutablegraph.cpp:616"):24 | use nullptr |
 | [mutablegraph.cpp:659](https://github.com/graphia-app/graphia/blob/master/source/app/graph/mutablegraph.cpp#L659 "source/app/graph/mutablegraph.cpp:659"):34 | use nullptr |
 | [mutablegraph.cpp:682](https://github.com/graphia-app/graphia/blob/master/source/app/graph/mutablegraph.cpp#L682 "source/app/graph/mutablegraph.cpp:682"):34 | use nullptr |
-| [pairwisetxtfileparser.cpp:91](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/pairwisetxtfileparser.cpp#L91 "source/shared/loading/pairwisetxtfileparser.cpp:91"):18 | use nullptr |
-| [pairwisetxtfileparser.cpp:95](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/pairwisetxtfileparser.cpp#L95 "source/shared/loading/pairwisetxtfileparser.cpp:95"):19 | use nullptr |
-| [pairwisetxtfileparser.cpp:95](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/pairwisetxtfileparser.cpp#L95 "source/shared/loading/pairwisetxtfileparser.cpp:95"):31 | use nullptr |
 | [performancecounter.cpp:35](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/performancecounter.cpp#L35 "source/shared/utils/performancecounter.cpp:35"):12 | use nullptr |
+| [tabulardata.h:150](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/tabulardata.h#L150 "source/shared/loading/tabulardata.h:150"):22 | use nullptr |
 | [transformedgraph.cpp:277](https://github.com/graphia-app/graphia/blob/master/source/app/transform/transformedgraph.cpp#L277 "source/app/transform/transformedgraph.cpp:277"):34 | use nullptr |
 | [transformedgraph.cpp:286](https://github.com/graphia-app/graphia/blob/master/source/app/transform/transformedgraph.cpp#L286 "source/app/transform/transformedgraph.cpp:286"):34 | use nullptr |
 | [transformedgraph.cpp:300](https://github.com/graphia-app/graphia/blob/master/source/app/transform/transformedgraph.cpp#L300 "source/app/transform/transformedgraph.cpp:300"):34 | use nullptr |

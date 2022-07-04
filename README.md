@@ -6,4 +6,4 @@
 | File:Line:Column | Message |
 |---|---|
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
-| [elementid.h:60](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/elementid.h#L60 "source/shared/graph/elementid.h:60"):63 | use nullptr |
+| [elementid.h:60](https://github.com/graphia-app/graphia/blob/is_release/source/shared/graph/elementid.h#L60 "source/shared/graph/elementid.h:60"):63 | use nullptr |

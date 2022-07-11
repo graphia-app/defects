@@ -1,5 +1,5 @@
 # Summary
-| Code | Severity | Tool | Count (1950) |
+| Code | Severity | Tool | Count (1949) |
 |---|---|---|---|
 | unqualified-access | warning | qmllint | 744 |
 | property-not-found-on-type | warning | qmllint | 441 |
@@ -24,7 +24,6 @@
 | cannot-defer-property-assignment-to | warning | qmllint | 3 |
 | use-static-qregularexpression | warning | clazy | 3 |
 | type-is-method-you-cannot | warning | qmllint | 2 |
-| warnings-occurred-while-importing-module | warning | qmllint | 2 |
 | cannot-combine-value-source-and | warning | qmllint | 1 |
 | cert-err33-c | warning | clang-tidy | 1 |
 | document-was-not-found-did | warning | qmllint | 1 |
@@ -32,6 +31,7 @@
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 | parameter-to-signal-handler-for | warning | qmllint | 1 |
 | unknown-grouped-property-scope | warning | qmllint | 1 |
+| warnings-occurred-while-importing-module | warning | qmllint | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -1925,8 +1925,7 @@
 | [attributesynthesistransform.cpp:76](https://github.com/graphia-app/graphia/blob/master/source/app/transform/transforms/attributesynthesistransform.cpp#L76 "source/app/transform/transforms/attributesynthesistransform.cpp:76"):26 | Don't create temporary QRegularExpression objects. Use a static QRegularExpression object instead |
 | [attributesynthesistransform.cpp:79](https://github.com/graphia-app/graphia/blob/master/source/app/transform/transforms/attributesynthesistransform.cpp#L79 "source/app/transform/transforms/attributesynthesistransform.cpp:79"):54 | Don't create temporary QRegularExpression objects. Use a static QRegularExpression object instead |
 | <h3>warnings-occurred-while-importing-module</h3> | <h4>qmllint warning</h4> |
-| [ManageBookmarks.qml:25](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L25 "source/app/ui/qml/ManageBookmarks.qml:25"):1 | Warnings occurred while importing module "app.graphia": |
-| [TreeBox.qml:24](https://github.com/graphia-app/graphia/blob/master/Controls/TreeBox.qml#L24 "Controls/TreeBox.qml:24"):1 | Warnings occurred while importing module "SortFilterProxyModel": |
+| [Tracking.qml:23](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Tracking.qml#L23 "source/app/ui/qml/Tracking.qml:23"):1 | Warnings occurred while importing module "app.graphia": |
 | <h3>was-not-found-did-you</h3> | <h4>qmllint warning</h4> |
 | [ChooserDialog.qml:85](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Loading/ChooserDialog.qml#L85 "source/app/ui/qml/Loading/ChooserDialog.qml:85"):24 | SortFilterProxyModel was not found. Did you add all import paths? |
 | [CloneAttributeDialog.qml:109](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/CloneAttributeDialog.qml#L109 "source/app/ui/qml/CloneAttributeDialog.qml:109"):13 | NamedIcon was not found. Did you add all import paths? |

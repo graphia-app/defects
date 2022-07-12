@@ -303,7 +303,7 @@
 | [CorrelationParameters.qml:417](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/ui/qml/CorrelationParameters.qml#L417 "source/plugins/correlation/ui/qml/CorrelationParameters.qml:417"):25 | Cannot assign to non-existent default property |
 | [CorrelationParameters.qml:424](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/ui/qml/CorrelationParameters.qml#L424 "source/plugins/correlation/ui/qml/CorrelationParameters.qml:424"):25 | Cannot assign to non-existent default property |
 | [CorrelationPlugin.qml:848](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/ui/qml/CorrelationPlugin.qml#L848 "source/plugins/correlation/ui/qml/CorrelationPlugin.qml:848"):21 | Cannot assign to non-existent default property |
-| [DraggableList.qml:195](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L195 "Controls/DraggableList.qml:195"):25 | Cannot assign to non-existent default property |
+| [DraggableList.qml:203](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L203 "Controls/DraggableList.qml:203"):25 | Cannot assign to non-existent default property |
 | [HelpTooltip.qml:50](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/HelpTooltip.qml#L50 "Shared/Controls/HelpTooltip.qml:50"):5 | Cannot assign to non-existent default property |
 | [PlatformMenu.qml:51](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/+nativemenu/PlatformMenu.qml#L51 "Shared/Controls/+nativemenu/PlatformMenu.qml:51"):5 | Cannot assign to non-existent default property |
 | [TabUI.qml:647](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/TabUI.qml#L647 "source/app/ui/qml/TabUI.qml:647"):17 | Cannot assign to non-existent default property |
@@ -569,8 +569,8 @@
 | [DownloadProgress.qml:43](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/DownloadProgress.qml#L43 "source/app/ui/qml/DownloadProgress.qml:43"):28 | Property "height" not found on type "NamedIcon" |
 | [DraggableList.qml:152](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L152 "Controls/DraggableList.qml:152"):50 | Property "width" not found on type "QObject" |
 | [DraggableList.qml:153](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L153 "Controls/DraggableList.qml:153"):51 | Property "height" not found on type "QObject" |
-| [DraggableList.qml:212](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L212 "Controls/DraggableList.qml:212"):33 | Property "index" not found on type "QObject" |
-| [DraggableList.qml:224](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L224 "Controls/DraggableList.qml:224"):47 | Property "pinned" not found on type "QObject" |
+| [DraggableList.qml:220](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L220 "Controls/DraggableList.qml:220"):33 | Property "index" not found on type "QObject" |
+| [DraggableList.qml:232](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L232 "Controls/DraggableList.qml:232"):47 | Property "pinned" not found on type "QObject" |
 | [EditAttributeDialog.qml:111](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/EditAttributeDialog.qml#L111 "source/app/ui/qml/EditAttributeDialog.qml:111"):55 | Property "rowIsEdited" not found on type "EditAttributeTableModel" |
 | [EditAttributeDialog.qml:114](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/EditAttributeDialog.qml#L114 "source/app/ui/qml/EditAttributeDialog.qml:114"):41 | Property "resetRowValue" not found on type "EditAttributeTableModel" |
 | [EditAttributeDialog.qml:121](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/EditAttributeDialog.qml#L121 "source/app/ui/qml/EditAttributeDialog.qml:121"):46 | Property "hasEdits" not found on type "EditAttributeTableModel" |
@@ -1276,10 +1276,10 @@
 | [DownloadProgress.qml:114](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/DownloadProgress.qml#L114 "source/app/ui/qml/DownloadProgress.qml:114"):25 | Unqualified access |
 | [DownloadProgress.qml:33](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/DownloadProgress.qml#L33 "source/app/ui/qml/DownloadProgress.qml:33"):44 | Unqualified access |
 | [DraggableList.qml:155](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L155 "Controls/DraggableList.qml:155"):32 | Unqualified access |
-| [DraggableList.qml:183](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L183 "Controls/DraggableList.qml:183"):34 | Unqualified access |
-| [DraggableList.qml:184](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L184 "Controls/DraggableList.qml:184"):35 | Unqualified access |
-| [DraggableList.qml:191](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L191 "Controls/DraggableList.qml:191"):61 | Unqualified access |
-| [DraggableList.qml:202](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L202 "Controls/DraggableList.qml:202"):38 | Unqualified access |
+| [DraggableList.qml:185](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L185 "Controls/DraggableList.qml:185"):21 | Unqualified access |
+| [DraggableList.qml:190](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L190 "Controls/DraggableList.qml:190"):21 | Unqualified access |
+| [DraggableList.qml:199](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L199 "Controls/DraggableList.qml:199"):61 | Unqualified access |
+| [DraggableList.qml:210](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L210 "Controls/DraggableList.qml:210"):38 | Unqualified access |
 | [DraggableList.qml:48](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L48 "Controls/DraggableList.qml:48"):27 | Unqualified access |
 | [DraggableList.qml:49](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L49 "Controls/DraggableList.qml:49"):28 | Unqualified access |
 | [DraggableList.qml:55](https://github.com/graphia-app/graphia/blob/master/Controls/DraggableList.qml#L55 "Controls/DraggableList.qml:55"):28 | Unqualified access |

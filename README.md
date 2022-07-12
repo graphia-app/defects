@@ -1,5 +1,5 @@
 # Summary
-| Code | Severity | Tool | Count (1948) |
+| Code | Severity | Tool | Count (1945) |
 |---|---|---|---|
 | unqualified-access | warning | qmllint | 744 |
 | property-not-found-on-type | warning | qmllint | 441 |
@@ -22,16 +22,14 @@
 | property-is-variant-property-it | warning | qmllint | 5 |
 | qproperty-type-mismatch | warning | clazy | 5 |
 | cannot-defer-property-assignment-to | warning | qmllint | 3 |
-| use-static-qregularexpression | warning | clazy | 3 |
 | type-is-method-you-cannot | warning | qmllint | 2 |
+| warnings-occurred-while-importing-module | warning | qmllint | 2 |
 | cannot-combine-value-source-and | warning | qmllint | 1 |
-| cert-err33-c | warning | clang-tidy | 1 |
 | document-was-not-found-did | warning | qmllint | 1 |
 | graph-was-not-found-did | warning | qmllint | 1 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 | parameter-to-signal-handler-for | warning | qmllint | 1 |
 | unknown-grouped-property-scope | warning | qmllint | 1 |
-| warnings-occurred-while-importing-module | warning | qmllint | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -325,8 +323,6 @@
 | [TreeBox.qml:30](https://github.com/graphia-app/graphia/blob/master/Controls/TreeBox.qml#L30 "Controls/TreeBox.qml:30"):1 | Cannot resolve alias "sorters" |
 | [TreeBox.qml:30](https://github.com/graphia-app/graphia/blob/master/Controls/TreeBox.qml#L30 "Controls/TreeBox.qml:30"):1 | Cannot resolve alias "sortRoleName" |
 | [TreeBox.qml:30](https://github.com/graphia-app/graphia/blob/master/Controls/TreeBox.qml#L30 "Controls/TreeBox.qml:30"):1 | Cannot resolve alias "filters" |
-| <h3>cert-err33-c</h3> | <h4>clang-tidy warning</h4> |
-| [main.cpp:393](https://github.com/graphia-app/graphia/blob/master/source/app/main.cpp#L393 "source/app/main.cpp:393"):9 | the value returned by this function should be used |
 | <h3>component-is-missing-required-property</h3> | <h4>qmllint warning</h4> |
 | [TreeBox.qml:323](https://github.com/graphia-app/graphia/blob/master/Controls/TreeBox.qml#L323 "Controls/TreeBox.qml:323"):21 | Component is missing required property expanded from T.TreeViewDelegate |
 | [TreeBox.qml:323](https://github.com/graphia-app/graphia/blob/master/Controls/TreeBox.qml#L323 "Controls/TreeBox.qml:323"):21 | Component is missing required property depth from T.TreeViewDelegate |
@@ -1919,12 +1915,9 @@
 | [main.qml:23](https://github.com/graphia-app/graphia/blob/master/source/crashreporter/main.qml#L23 "source/crashreporter/main.qml:23"):1 | Unused import at /home/runner/work/graphia/graphia/source/crashreporter/main.qml:23:1 |
 | [main.qml:26](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L26 "source/app/ui/qml/main.qml:26"):1 | Unused import at /home/runner/work/graphia/graphia/source/app/ui/qml/main.qml:26:1 |
 | [main.qml:29](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L29 "source/app/ui/qml/main.qml:29"):1 | Unused import at /home/runner/work/graphia/graphia/source/app/ui/qml/main.qml:29:1 |
-| <h3>use-static-qregularexpression</h3> | <h4>clazy warning</h4> |
-| [applyvisualisationscommand.cpp:117](https://github.com/graphia-app/graphia/blob/master/source/app/commands/applyvisualisationscommand.cpp#L117 "source/app/commands/applyvisualisationscommand.cpp:117"):24 | Don't create temporary QRegularExpression objects. Use a static QRegularExpression object instead |
-| [attributesynthesistransform.cpp:76](https://github.com/graphia-app/graphia/blob/master/source/app/transform/transforms/attributesynthesistransform.cpp#L76 "source/app/transform/transforms/attributesynthesistransform.cpp:76"):26 | Don't create temporary QRegularExpression objects. Use a static QRegularExpression object instead |
-| [attributesynthesistransform.cpp:79](https://github.com/graphia-app/graphia/blob/master/source/app/transform/transforms/attributesynthesistransform.cpp#L79 "source/app/transform/transforms/attributesynthesistransform.cpp:79"):54 | Don't create temporary QRegularExpression objects. Use a static QRegularExpression object instead |
 | <h3>warnings-occurred-while-importing-module</h3> | <h4>qmllint warning</h4> |
-| [Tracking.qml:23](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Tracking.qml#L23 "source/app/ui/qml/Tracking.qml:23"):1 | Warnings occurred while importing module "app.graphia": |
+| [ManageBookmarks.qml:25](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L25 "source/app/ui/qml/ManageBookmarks.qml:25"):1 | Warnings occurred while importing module "app.graphia": |
+| [TreeBox.qml:24](https://github.com/graphia-app/graphia/blob/master/Controls/TreeBox.qml#L24 "Controls/TreeBox.qml:24"):1 | Warnings occurred while importing module "SortFilterProxyModel": |
 | <h3>was-not-found-did-you</h3> | <h4>qmllint warning</h4> |
 | [ChooserDialog.qml:85](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Loading/ChooserDialog.qml#L85 "source/app/ui/qml/Loading/ChooserDialog.qml:85"):24 | SortFilterProxyModel was not found. Did you add all import paths? |
 | [CloneAttributeDialog.qml:109](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/CloneAttributeDialog.qml#L109 "source/app/ui/qml/CloneAttributeDialog.qml:109"):13 | NamedIcon was not found. Did you add all import paths? |

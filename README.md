@@ -1,8 +1,8 @@
 # Summary
 | Code | Severity | Tool | Count (1949) |
 |---|---|---|---|
-| unqualified-access | warning | qmllint | 744 |
-| property-not-found-on-type | warning | qmllint | 443 |
+| unqualified-access | warning | qmllint | 745 |
+| property-not-found-on-type | warning | qmllint | 442 |
 | binding-assigned-to-but-no | warning | qmllint | 232 |
 | signal-handler-for-has-more | warning | qmllint | 171 |
 | was-not-found-did-you | warning | qmllint | 88 |
@@ -882,9 +882,8 @@
 | [main.qml:408](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L408 "source/app/ui/qml/main.qml:408"):36 | Property "pluginDetails" not found on type "Application" |
 | [main.qml:416](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L416 "source/app/ui/qml/main.qml:416"):25 | Property "text" not found on type "ChangeLog" |
 | [main.qml:43](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L43 "source/updater/main.qml:43"):36 | Property "margin" not found on type "Constants" |
+| [main.qml:478](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L478 "source/app/ui/qml/main.qml:478"):46 | Property "checkedAction" not found on type "Action" |
 | [main.qml:47](https://github.com/graphia-app/graphia/blob/master/source/crashreporter/main.qml#L47 "source/crashreporter/main.qml:47"):36 | Property "margin" not found on type "Constants" |
-| [main.qml:483](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L483 "source/app/ui/qml/main.qml:483"):36 | Property "current" not found on type "ActionGroup" |
-| [main.qml:494](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L494 "source/app/ui/qml/main.qml:494"):36 | Property "current" not found on type "ActionGroup" |
 | [main.qml:517](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L517 "source/updater/editor/main.qml:517"):24 | Property "FileDialog" not found on type "Labs.FileDialog" |
 | [main.qml:553](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L553 "source/updater/editor/main.qml:553"):23 | Property "MessageDialog" not found on type "Labs.MessageDialog" |
 | [main.qml:56](https://github.com/graphia-app/graphia/blob/master/source/crashreporter/main.qml#L56 "source/crashreporter/main.qml:56"):39 | Property "margin" not found on type "Constants" |
@@ -1836,8 +1835,9 @@
 | [main.qml:337](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L337 "source/updater/editor/main.qml:337"):28 | Unqualified access |
 | [main.qml:381](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L381 "source/app/ui/qml/main.qml:381"):13 | Unqualified access |
 | [main.qml:446](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L446 "source/app/ui/qml/main.qml:446"):15 | Unqualified access |
-| [main.qml:478](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L478 "source/app/ui/qml/main.qml:478"):56 | Unqualified access |
 | [main.qml:47](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L47 "source/updater/editor/main.qml:47"):17 | Unqualified access |
+| [main.qml:486](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L486 "source/app/ui/qml/main.qml:486"):53 | Unqualified access |
+| [main.qml:497](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L497 "source/app/ui/qml/main.qml:497"):53 | Unqualified access |
 | [main.qml:511](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L511 "source/app/ui/qml/main.qml:511"):16 | Unqualified access |
 | [main.qml:517](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L517 "source/app/ui/qml/main.qml:517"):16 | Unqualified access |
 | [main.qml:522](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L522 "source/updater/editor/main.qml:522"):23 | Unqualified access |

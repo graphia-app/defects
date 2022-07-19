@@ -1,7 +1,7 @@
 # Summary
 | Code | Severity | Tool | Count (1949) |
 |---|---|---|---|
-| unqualified-access | warning | qmllint | 745 |
+| unqualified-access | warning | qmllint | 744 |
 | property-not-found-on-type | warning | qmllint | 442 |
 | binding-assigned-to-but-no | warning | qmllint | 232 |
 | signal-handler-for-has-more | warning | qmllint | 171 |
@@ -22,14 +22,15 @@
 | property-is-variant-property-it | warning | qmllint | 5 |
 | qproperty-type-mismatch | warning | clazy | 5 |
 | cannot-defer-property-assignment-to | warning | qmllint | 3 |
+| performance-unnecessary-value-param | warning | clang-tidy | 2 |
 | type-is-method-you-cannot | warning | qmllint | 2 |
-| warnings-occurred-while-importing-module | warning | qmllint | 2 |
 | cannot-combine-value-source-and | warning | qmllint | 1 |
 | document-was-not-found-did | warning | qmllint | 1 |
 | graph-was-not-found-did | warning | qmllint | 1 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 | parameter-to-signal-handler-for | warning | qmllint | 1 |
 | unknown-grouped-property-scope | warning | qmllint | 1 |
+| warnings-occurred-while-importing-module | warning | qmllint | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -260,7 +261,7 @@
 | [main.qml:1304](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1304 "source/app/ui/qml/main.qml:1304"):9 | Binding assigned to "nameFilters", but no property "nameFilters" exists in the current element. |
 | [main.qml:136](https://github.com/graphia-app/graphia/blob/master/source/crashreporter/main.qml#L136 "source/crashreporter/main.qml:136"):13 | Binding assigned to "title", but no property "title" exists in the current element. |
 | [main.qml:137](https://github.com/graphia-app/graphia/blob/master/source/crashreporter/main.qml#L137 "source/crashreporter/main.qml:137"):13 | Binding assigned to "text", but no property "text" exists in the current element. |
-| [main.qml:1716](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1716 "source/app/ui/qml/main.qml:1716"):9 | Binding assigned to "title", but no property "title" exists in the current element. |
+| [main.qml:1721](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1721 "source/app/ui/qml/main.qml:1721"):9 | Binding assigned to "title", but no property "title" exists in the current element. |
 | [main.qml:254](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L254 "source/updater/editor/main.qml:254"):9 | Binding assigned to "fileMode", but no property "fileMode" exists in the current element. |
 | [main.qml:255](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L255 "source/updater/editor/main.qml:255"):9 | Binding assigned to "nameFilters", but no property "nameFilters" exists in the current element. |
 | [main.qml:278](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L278 "source/updater/editor/main.qml:278"):9 | Binding assigned to "fileMode", but no property "fileMode" exists in the current element. |
@@ -403,6 +404,9 @@
 | [ToolBarButton.qml:29](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/+macos/ToolBarButton.qml#L29 "Shared/Controls/+macos/ToolBarButton.qml:29"):5 | No type found for property "selected". This may be due to a missing import statement or incomplete qmltypes files. |
 | <h3>parameter-to-signal-handler-for</h3> | <h4>qmllint warning</h4> |
 | [DataTable.qml:61](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/DataTable.qml#L61 "Shared/Controls/DataTable.qml:61"):5 | Parameter 1 to signal handler for "onClicked" is called "mouse". The signal has a parameter of the same name in position 3. |
+| <h3>performance-unnecessary-value-param</h3> | <h4>clang-tidy warning</h4> |
+| [document.cpp:2471](https://github.com/graphia-app/graphia/blob/master/source/app/ui/document.cpp#L2471 "source/app/ui/document.cpp:2471"):63 | the parameter 'visualisations' is copied for each invocation but only used as a const reference; consider making it a const reference |
+| [document.cpp:2535](https://github.com/graphia-app/graphia/blob/master/source/app/ui/document.cpp#L2535 "source/app/ui/document.cpp:2535"):67 | the parameter 'newVisualisations' is copied for each invocation but only used as a const reference; consider making it a const reference |
 | <h3>preferences-was-not-found-did</h3> | <h4>qmllint warning</h4> |
 | [CaptureScreenshotDialog.qml:53](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/CaptureScreenshotDialog.qml#L53 "source/app/ui/qml/CaptureScreenshotDialog.qml:53"):5 | Preferences was not found. Did you add all import paths? |
 | [CaptureScreenshotDialog.qml:62](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/CaptureScreenshotDialog.qml#L62 "source/app/ui/qml/CaptureScreenshotDialog.qml:62"):5 | Preferences was not found. Did you add all import paths? |
@@ -655,8 +659,8 @@
 | [ListTabView.qml:69](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/ListTabView.qml#L69 "Shared/Controls/ListTabView.qml:69"):40 | Property "margin" not found on type "Constants" |
 | [ListTabView.qml:71](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/ListTabView.qml#L71 "Shared/Controls/ListTabView.qml:71"):32 | Property "spacing" not found on type "Constants" |
 | [ListTabView.qml:76](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/ListTabView.qml#L76 "Shared/Controls/ListTabView.qml:76"):79 | Property "padding" not found on type "Constants" |
-| [ManageBookmarks.qml:46](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L46 "source/app/ui/qml/ManageBookmarks.qml:46"):36 | Property "margin" not found on type "Constants" |
-| [ManageBookmarks.qml:80](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L80 "source/app/ui/qml/ManageBookmarks.qml:80"):59 | Property "highlightColor" not found on type "QQuickItem" |
+| [ManageNamedListDialog.qml:46](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageNamedListDialog.qml#L46 "source/app/ui/qml/ManageNamedListDialog.qml:46"):36 | Property "margin" not found on type "Constants" |
+| [ManageNamedListDialog.qml:80](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageNamedListDialog.qml#L80 "source/app/ui/qml/ManageNamedListDialog.qml:80"):59 | Property "highlightColor" not found on type "QQuickItem" |
 | [MappingSelector.qml:144](https://github.com/graphia-app/graphia/blob/master/Controls/MappingSelector.qml#L144 "Controls/MappingSelector.qml:144"):36 | Property "margin" not found on type "Constants" |
 | [MappingSelector.qml:152](https://github.com/graphia-app/graphia/blob/master/Controls/MappingSelector.qml#L152 "Controls/MappingSelector.qml:152"):36 | Property "spacing" not found on type "Constants" |
 | [MappingSelector.qml:188](https://github.com/graphia-app/graphia/blob/master/Controls/MappingSelector.qml#L188 "Controls/MappingSelector.qml:188"):45 | Property "setRangeToMinMax" not found on type "VisualisationMappingPlot" |
@@ -861,23 +865,23 @@
 | [main.qml:131](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L131 "source/app/ui/qml/main.qml:131"):23 | Property "refresh" not found on type "ChangeLog" |
 | [main.qml:134](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L134 "source/updater/main.qml:134"):28 | Property "spacing" not found on type "Constants" |
 | [main.qml:158](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L158 "source/updater/main.qml:158"):28 | Property "spacing" not found on type "Constants" |
-| [main.qml:1683](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1683 "source/app/ui/qml/main.qml:1683"):30 | Property "debugEnabled" not found on type "Application" |
-| [main.qml:1691](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1691 "source/app/ui/qml/main.qml:1691"):30 | Property "debugEnabled" not found on type "Application" |
+| [main.qml:1688](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1688 "source/app/ui/qml/main.qml:1688"):30 | Property "debugEnabled" not found on type "Application" |
+| [main.qml:1696](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1696 "source/app/ui/qml/main.qml:1696"):30 | Property "debugEnabled" not found on type "Application" |
 | [main.qml:170](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L170 "source/app/ui/qml/main.qml:170"):25 | Property "submitTrackingData" not found on type "Application" |
-| [main.qml:1907](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1907 "source/app/ui/qml/main.qml:1907"):28 | Property "available" not found on type "ChangeLog" |
-| [main.qml:2187](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2187 "source/app/ui/qml/main.qml:2187"):34 | Property "debugEnabled" not found on type "Application" |
-| [main.qml:2431](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2431 "source/app/ui/qml/main.qml:2431"):31 | Property "padding" not found on type "Constants" |
-| [main.qml:2432](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2432 "source/app/ui/qml/main.qml:2432"):34 | Property "padding" not found on type "Constants" |
-| [main.qml:2471](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2471 "source/app/ui/qml/main.qml:2471"):39 | Property "updateDownloadProgress" not found on type "Application" |
-| [main.qml:2478](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2478 "source/app/ui/qml/main.qml:2478"):48 | Property "updateDownloadProgress" not found on type "Application" |
-| [main.qml:2479](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2479 "source/app/ui/qml/main.qml:2479"):57 | Property "updateDownloadProgress" not found on type "Application" |
+| [main.qml:1912](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1912 "source/app/ui/qml/main.qml:1912"):28 | Property "available" not found on type "ChangeLog" |
+| [main.qml:2194](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2194 "source/app/ui/qml/main.qml:2194"):34 | Property "debugEnabled" not found on type "Application" |
+| [main.qml:2438](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2438 "source/app/ui/qml/main.qml:2438"):31 | Property "padding" not found on type "Constants" |
+| [main.qml:2439](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2439 "source/app/ui/qml/main.qml:2439"):34 | Property "padding" not found on type "Constants" |
+| [main.qml:2478](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2478 "source/app/ui/qml/main.qml:2478"):39 | Property "updateDownloadProgress" not found on type "Application" |
+| [main.qml:2485](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2485 "source/app/ui/qml/main.qml:2485"):48 | Property "updateDownloadProgress" not found on type "Application" |
+| [main.qml:2486](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2486 "source/app/ui/qml/main.qml:2486"):57 | Property "updateDownloadProgress" not found on type "Application" |
 | [main.qml:254](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L254 "source/updater/editor/main.qml:254"):24 | Property "FileDialog" not found on type "Labs.FileDialog" |
-| [main.qml:2657](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2657 "source/app/ui/qml/main.qml:2657"):48 | Property "document" not found on type "QObject" |
+| [main.qml:2664](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2664 "source/app/ui/qml/main.qml:2664"):48 | Property "document" not found on type "QObject" |
 | [main.qml:278](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L278 "source/updater/editor/main.qml:278"):24 | Property "FileDialog" not found on type "Labs.FileDialog" |
-| [main.qml:2914](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2914 "source/app/ui/qml/main.qml:2914"):38 | Property "downloadActive" not found on type "Application" |
-| [main.qml:2915](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2915 "source/app/ui/qml/main.qml:2915"):39 | Property "downloadProgress" not found on type "Application" |
-| [main.qml:2923](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2923 "source/app/ui/qml/main.qml:2923"):48 | Property "cancelDownload" not found on type "Application" |
-| [main.qml:2937](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2937 "source/app/ui/qml/main.qml:2937"):32 | Property "spacing" not found on type "Constants" |
+| [main.qml:2921](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2921 "source/app/ui/qml/main.qml:2921"):38 | Property "downloadActive" not found on type "Application" |
+| [main.qml:2922](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2922 "source/app/ui/qml/main.qml:2922"):39 | Property "downloadProgress" not found on type "Application" |
+| [main.qml:2930](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2930 "source/app/ui/qml/main.qml:2930"):48 | Property "cancelDownload" not found on type "Application" |
+| [main.qml:2944](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2944 "source/app/ui/qml/main.qml:2944"):32 | Property "spacing" not found on type "Constants" |
 | [main.qml:315](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L315 "source/updater/editor/main.qml:315"):35 | Property "open" not found on type "Labs.FileDialog" |
 | [main.qml:408](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L408 "source/app/ui/qml/main.qml:408"):36 | Property "pluginDetails" not found on type "Application" |
 | [main.qml:416](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L416 "source/app/ui/qml/main.qml:416"):25 | Property "text" not found on type "ChangeLog" |
@@ -950,8 +954,8 @@
 | [ListTabView.qml:180](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/ListTabView.qml#L180 "Shared/Controls/ListTabView.qml:180"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
 | [ListTabView.qml:199](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/ListTabView.qml#L199 "Shared/Controls/ListTabView.qml:199"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
 | [ListTabView.qml:223](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/ListTabView.qml#L223 "Shared/Controls/ListTabView.qml:223"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
-| [ManageBookmarks.qml:152](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L152 "source/app/ui/qml/ManageBookmarks.qml:152"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
-| [ManageBookmarks.qml:159](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L159 "source/app/ui/qml/ManageBookmarks.qml:159"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
+| [ManageNamedListDialog.qml:149](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageNamedListDialog.qml#L149 "source/app/ui/qml/ManageNamedListDialog.qml:149"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
+| [ManageNamedListDialog.qml:156](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageNamedListDialog.qml#L156 "source/app/ui/qml/ManageNamedListDialog.qml:156"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
 | [MappingSelector.qml:290](https://github.com/graphia-app/graphia/blob/master/Controls/MappingSelector.qml#L290 "Controls/MappingSelector.qml:290"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
 | [MappingSelector.qml:301](https://github.com/graphia-app/graphia/blob/master/Controls/MappingSelector.qml#L301 "Controls/MappingSelector.qml:301"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
 | [MappingSelector.qml:312](https://github.com/graphia-app/graphia/blob/master/Controls/MappingSelector.qml#L312 "Controls/MappingSelector.qml:312"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
@@ -1040,30 +1044,30 @@
 | [main.qml:146](https://github.com/graphia-app/graphia/blob/master/source/crashreporter/main.qml#L146 "source/crashreporter/main.qml:146"):13 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
 | [main.qml:1476](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1476 "source/app/ui/qml/main.qml:1476"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
 | [main.qml:1509](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1509 "source/app/ui/qml/main.qml:1509"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1527](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1527 "source/app/ui/qml/main.qml:1527"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1539](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1539 "source/app/ui/qml/main.qml:1539"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1692](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1692 "source/app/ui/qml/main.qml:1692"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1703](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1703 "source/app/ui/qml/main.qml:1703"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1710](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1710 "source/app/ui/qml/main.qml:1710"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1723](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1723 "source/app/ui/qml/main.qml:1723"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1736](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1736 "source/app/ui/qml/main.qml:1736"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1743](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1743 "source/app/ui/qml/main.qml:1743"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1770](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1770 "source/app/ui/qml/main.qml:1770"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1800](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1800 "source/app/ui/qml/main.qml:1800"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1830](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1830 "source/app/ui/qml/main.qml:1830"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1842](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1842 "source/app/ui/qml/main.qml:1842"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1854](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1854 "source/app/ui/qml/main.qml:1854"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1865](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1865 "source/app/ui/qml/main.qml:1865"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1876](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1876 "source/app/ui/qml/main.qml:1876"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1896](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1896 "source/app/ui/qml/main.qml:1896"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1911](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1911 "source/app/ui/qml/main.qml:1911"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1532](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1532 "source/app/ui/qml/main.qml:1532"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1544](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1544 "source/app/ui/qml/main.qml:1544"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1697](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1697 "source/app/ui/qml/main.qml:1697"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1708](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1708 "source/app/ui/qml/main.qml:1708"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1715](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1715 "source/app/ui/qml/main.qml:1715"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1728](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1728 "source/app/ui/qml/main.qml:1728"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1741](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1741 "source/app/ui/qml/main.qml:1741"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1748](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1748 "source/app/ui/qml/main.qml:1748"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1775](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1775 "source/app/ui/qml/main.qml:1775"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1805](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1805 "source/app/ui/qml/main.qml:1805"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1835](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1835 "source/app/ui/qml/main.qml:1835"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1847](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1847 "source/app/ui/qml/main.qml:1847"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1859](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1859 "source/app/ui/qml/main.qml:1859"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1870](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1870 "source/app/ui/qml/main.qml:1870"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1881](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1881 "source/app/ui/qml/main.qml:1881"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1901](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1901 "source/app/ui/qml/main.qml:1901"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1916](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1916 "source/app/ui/qml/main.qml:1916"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
 | [main.qml:191](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L191 "source/updater/main.qml:191"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
-| [main.qml:1924](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1924 "source/app/ui/qml/main.qml:1924"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1936](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1936 "source/app/ui/qml/main.qml:1936"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:1943](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1943 "source/app/ui/qml/main.qml:1943"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1929](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1929 "source/app/ui/qml/main.qml:1929"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1941](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1941 "source/app/ui/qml/main.qml:1941"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:1948](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1948 "source/app/ui/qml/main.qml:1948"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
 | [main.qml:197](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L197 "source/updater/main.qml:197"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
-| [main.qml:2163](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2163 "source/app/ui/qml/main.qml:2163"):25 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
-| [main.qml:2895](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2895 "source/app/ui/qml/main.qml:2895"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
+| [main.qml:2168](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2168 "source/app/ui/qml/main.qml:2168"):25 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
+| [main.qml:2902](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2902 "source/app/ui/qml/main.qml:2902"):17 | Signal handler for "onClicked" has more formal parameters than the signal it handles. |
 | [main.qml:535](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L535 "source/updater/editor/main.qml:535"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
 | [main.qml:610](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L610 "source/updater/editor/main.qml:610"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
 | [main.qml:623](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L623 "source/updater/editor/main.qml:623"):9 | Signal handler for "onTriggered" has more formal parameters than the signal it handles. |
@@ -1428,13 +1432,12 @@
 | [ListTabView.qml:213](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/ListTabView.qml#L213 "Shared/Controls/ListTabView.qml:213"):32 | Unqualified access |
 | [ListTabView.qml:291](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/ListTabView.qml#L291 "Shared/Controls/ListTabView.qml:291"):13 | Unqualified access |
 | [ListTabView.qml:84](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/ListTabView.qml#L84 "Shared/Controls/ListTabView.qml:84"):28 | Unqualified access |
-| [ManageBookmarks.qml:115](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L115 "source/app/ui/qml/ManageBookmarks.qml:115"):33 | Unqualified access |
-| [ManageBookmarks.qml:122](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L122 "source/app/ui/qml/ManageBookmarks.qml:122"):21 | Unqualified access |
-| [ManageBookmarks.qml:57](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L57 "source/app/ui/qml/ManageBookmarks.qml:57"):20 | Unqualified access |
-| [ManageBookmarks.qml:74](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L74 "source/app/ui/qml/ManageBookmarks.qml:74"):35 | Unqualified access |
-| [ManageBookmarks.qml:77](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L77 "source/app/ui/qml/ManageBookmarks.qml:77"):50 | Unqualified access |
-| [ManageBookmarks.qml:82](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L82 "source/app/ui/qml/ManageBookmarks.qml:82"):27 | Unqualified access |
-| [ManageBookmarks.qml:84](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L84 "source/app/ui/qml/ManageBookmarks.qml:84"):28 | Unqualified access |
+| [ManageNamedListDialog.qml:115](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageNamedListDialog.qml#L115 "source/app/ui/qml/ManageNamedListDialog.qml:115"):33 | Unqualified access |
+| [ManageNamedListDialog.qml:122](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageNamedListDialog.qml#L122 "source/app/ui/qml/ManageNamedListDialog.qml:122"):21 | Unqualified access |
+| [ManageNamedListDialog.qml:74](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageNamedListDialog.qml#L74 "source/app/ui/qml/ManageNamedListDialog.qml:74"):35 | Unqualified access |
+| [ManageNamedListDialog.qml:77](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageNamedListDialog.qml#L77 "source/app/ui/qml/ManageNamedListDialog.qml:77"):50 | Unqualified access |
+| [ManageNamedListDialog.qml:82](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageNamedListDialog.qml#L82 "source/app/ui/qml/ManageNamedListDialog.qml:82"):27 | Unqualified access |
+| [ManageNamedListDialog.qml:84](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageNamedListDialog.qml#L84 "source/app/ui/qml/ManageNamedListDialog.qml:84"):28 | Unqualified access |
 | [MappingSelector.qml:276](https://github.com/graphia-app/graphia/blob/master/Controls/MappingSelector.qml#L276 "Controls/MappingSelector.qml:276"):60 | Unqualified access |
 | [MappingSelector.qml:277](https://github.com/graphia-app/graphia/blob/master/Controls/MappingSelector.qml#L277 "Controls/MappingSelector.qml:277"):60 | Unqualified access |
 | [MatrixParameters.qml:324](https://github.com/graphia-app/graphia/blob/master/source/plugins/generic/ui/qml/MatrixParameters.qml#L324 "source/plugins/generic/ui/qml/MatrixParameters.qml:324"):29 | Unqualified access |
@@ -1741,95 +1744,95 @@
 | [main.qml:1498](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1498 "source/app/ui/qml/main.qml:1498"):78 | Unqualified access |
 | [main.qml:1508](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1508 "source/app/ui/qml/main.qml:1508"):18 | Unqualified access |
 | [main.qml:150](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L150 "source/app/ui/qml/main.qml:150"):58 | Unqualified access |
-| [main.qml:1519](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1519 "source/app/ui/qml/main.qml:1519"):19 | Unqualified access |
-| [main.qml:1526](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1526 "source/app/ui/qml/main.qml:1526"):18 | Unqualified access |
-| [main.qml:1538](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1538 "source/app/ui/qml/main.qml:1538"):18 | Unqualified access |
+| [main.qml:1521](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1521 "source/app/ui/qml/main.qml:1521"):16 | Unqualified access |
+| [main.qml:1531](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1531 "source/app/ui/qml/main.qml:1531"):18 | Unqualified access |
+| [main.qml:1543](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1543 "source/app/ui/qml/main.qml:1543"):18 | Unqualified access |
 | [main.qml:155](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L155 "source/updater/main.qml:155"):18 | Unqualified access |
-| [main.qml:1560](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1560 "source/app/ui/qml/main.qml:1560"):18 | Unqualified access |
-| [main.qml:1581](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1581 "source/app/ui/qml/main.qml:1581"):18 | Unqualified access |
-| [main.qml:1595](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1595 "source/app/ui/qml/main.qml:1595"):22 | Unqualified access |
-| [main.qml:1611](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1611 "source/app/ui/qml/main.qml:1611"):22 | Unqualified access |
-| [main.qml:1627](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1627 "source/app/ui/qml/main.qml:1627"):22 | Unqualified access |
-| [main.qml:1648](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1648 "source/app/ui/qml/main.qml:1648"):22 | Unqualified access |
+| [main.qml:1565](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1565 "source/app/ui/qml/main.qml:1565"):18 | Unqualified access |
+| [main.qml:1586](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1586 "source/app/ui/qml/main.qml:1586"):18 | Unqualified access |
+| [main.qml:1600](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1600 "source/app/ui/qml/main.qml:1600"):22 | Unqualified access |
+| [main.qml:1616](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1616 "source/app/ui/qml/main.qml:1616"):22 | Unqualified access |
+| [main.qml:1632](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1632 "source/app/ui/qml/main.qml:1632"):22 | Unqualified access |
 | [main.qml:164](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L164 "source/updater/main.qml:164"):20 | Unqualified access |
-| [main.qml:1661](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1661 "source/app/ui/qml/main.qml:1661"):22 | Unqualified access |
-| [main.qml:1684](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1684 "source/app/ui/qml/main.qml:1684"):22 | Unqualified access |
+| [main.qml:1653](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1653 "source/app/ui/qml/main.qml:1653"):22 | Unqualified access |
+| [main.qml:1666](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1666 "source/app/ui/qml/main.qml:1666"):22 | Unqualified access |
+| [main.qml:1689](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1689 "source/app/ui/qml/main.qml:1689"):22 | Unqualified access |
 | [main.qml:172](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L172 "source/updater/main.qml:172"):22 | Unqualified access |
-| [main.qml:1769](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1769 "source/app/ui/qml/main.qml:1769"):18 | Unqualified access |
+| [main.qml:1774](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1774 "source/app/ui/qml/main.qml:1774"):18 | Unqualified access |
 | [main.qml:177](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L177 "source/updater/main.qml:177"):19 | Unqualified access |
-| [main.qml:1795](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1795 "source/app/ui/qml/main.qml:1795"):20 | Unqualified access |
-| [main.qml:1796](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1796 "source/app/ui/qml/main.qml:1796"):15 | Unqualified access |
-| [main.qml:1798](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1798 "source/app/ui/qml/main.qml:1798"):18 | Unqualified access |
-| [main.qml:1809](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1809 "source/app/ui/qml/main.qml:1809"):18 | Unqualified access |
-| [main.qml:1813](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1813 "source/app/ui/qml/main.qml:1813"):16 | Unqualified access |
-| [main.qml:1826](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1826 "source/app/ui/qml/main.qml:1826"):15 | Unqualified access |
-| [main.qml:1828](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1828 "source/app/ui/qml/main.qml:1828"):18 | Unqualified access |
-| [main.qml:1829](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1829 "source/app/ui/qml/main.qml:1829"):18 | Unqualified access |
-| [main.qml:1841](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1841 "source/app/ui/qml/main.qml:1841"):18 | Unqualified access |
+| [main.qml:1800](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1800 "source/app/ui/qml/main.qml:1800"):20 | Unqualified access |
+| [main.qml:1801](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1801 "source/app/ui/qml/main.qml:1801"):15 | Unqualified access |
+| [main.qml:1803](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1803 "source/app/ui/qml/main.qml:1803"):18 | Unqualified access |
+| [main.qml:1814](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1814 "source/app/ui/qml/main.qml:1814"):18 | Unqualified access |
+| [main.qml:1818](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1818 "source/app/ui/qml/main.qml:1818"):16 | Unqualified access |
+| [main.qml:1831](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1831 "source/app/ui/qml/main.qml:1831"):15 | Unqualified access |
+| [main.qml:1833](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1833 "source/app/ui/qml/main.qml:1833"):18 | Unqualified access |
+| [main.qml:1834](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1834 "source/app/ui/qml/main.qml:1834"):18 | Unqualified access |
+| [main.qml:1846](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1846 "source/app/ui/qml/main.qml:1846"):18 | Unqualified access |
 | [main.qml:188](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L188 "source/updater/main.qml:188"):26 | Unqualified access |
-| [main.qml:1923](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1923 "source/app/ui/qml/main.qml:1923"):18 | Unqualified access |
-| [main.qml:1971](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1971 "source/app/ui/qml/main.qml:1971"):31 | Unqualified access |
-| [main.qml:1974](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1974 "source/app/ui/qml/main.qml:1974"):37 | Unqualified access |
-| [main.qml:2010](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2010 "source/app/ui/qml/main.qml:2010"):26 | Unqualified access |
-| [main.qml:2015](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2015 "source/app/ui/qml/main.qml:2015"):28 | Unqualified access |
-| [main.qml:2018](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2018 "source/app/ui/qml/main.qml:2018"):31 | Unqualified access |
-| [main.qml:2019](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2019 "source/app/ui/qml/main.qml:2019"):40 | Unqualified access |
-| [main.qml:2032](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2032 "source/app/ui/qml/main.qml:2032"):25 | Unqualified access |
-| [main.qml:2033](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2033 "source/app/ui/qml/main.qml:2033"):26 | Unqualified access |
+| [main.qml:1928](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1928 "source/app/ui/qml/main.qml:1928"):18 | Unqualified access |
+| [main.qml:1976](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1976 "source/app/ui/qml/main.qml:1976"):31 | Unqualified access |
+| [main.qml:1979](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1979 "source/app/ui/qml/main.qml:1979"):37 | Unqualified access |
+| [main.qml:2015](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2015 "source/app/ui/qml/main.qml:2015"):26 | Unqualified access |
+| [main.qml:2020](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2020 "source/app/ui/qml/main.qml:2020"):28 | Unqualified access |
+| [main.qml:2023](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2023 "source/app/ui/qml/main.qml:2023"):31 | Unqualified access |
+| [main.qml:2024](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2024 "source/app/ui/qml/main.qml:2024"):40 | Unqualified access |
 | [main.qml:2037](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2037 "source/app/ui/qml/main.qml:2037"):25 | Unqualified access |
 | [main.qml:2038](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2038 "source/app/ui/qml/main.qml:2038"):26 | Unqualified access |
+| [main.qml:2042](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2042 "source/app/ui/qml/main.qml:2042"):25 | Unqualified access |
+| [main.qml:2043](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2043 "source/app/ui/qml/main.qml:2043"):26 | Unqualified access |
 | [main.qml:204](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L204 "source/updater/main.qml:204"):17 | Unqualified access |
-| [main.qml:2054](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2054 "source/app/ui/qml/main.qml:2054"):26 | Unqualified access |
 | [main.qml:2059](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2059 "source/app/ui/qml/main.qml:2059"):26 | Unqualified access |
+| [main.qml:2064](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2064 "source/app/ui/qml/main.qml:2064"):26 | Unqualified access |
 | [main.qml:207](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L207 "source/updater/main.qml:207"):16 | Unqualified access |
-| [main.qml:2080](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2080 "source/app/ui/qml/main.qml:2080"):30 | Unqualified access |
-| [main.qml:2094](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2094 "source/app/ui/qml/main.qml:2094"):26 | Unqualified access |
-| [main.qml:2134](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2134 "source/app/ui/qml/main.qml:2134"):45 | Unqualified access |
-| [main.qml:2139](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2139 "source/app/ui/qml/main.qml:2139"):25 | Unqualified access |
-| [main.qml:2144](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2144 "source/app/ui/qml/main.qml:2144"):24 | Unqualified access |
-| [main.qml:2149](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2149 "source/app/ui/qml/main.qml:2149"):27 | Unqualified access |
-| [main.qml:2155](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2155 "source/app/ui/qml/main.qml:2155"):32 | Unqualified access |
-| [main.qml:2170](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2170 "source/app/ui/qml/main.qml:2170"):30 | Unqualified access |
-| [main.qml:2178](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2178 "source/app/ui/qml/main.qml:2178"):64 | Unqualified access |
-| [main.qml:2179](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2179 "source/app/ui/qml/main.qml:2179"):64 | Unqualified access |
-| [main.qml:2180](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2180 "source/app/ui/qml/main.qml:2180"):64 | Unqualified access |
-| [main.qml:2181](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2181 "source/app/ui/qml/main.qml:2181"):64 | Unqualified access |
-| [main.qml:2182](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2182 "source/app/ui/qml/main.qml:2182"):64 | Unqualified access |
-| [main.qml:2194](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2194 "source/app/ui/qml/main.qml:2194"):54 | Unqualified access |
-| [main.qml:2199](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2199 "source/app/ui/qml/main.qml:2199"):54 | Unqualified access |
-| [main.qml:2204](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2204 "source/app/ui/qml/main.qml:2204"):54 | Unqualified access |
-| [main.qml:2209](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2209 "source/app/ui/qml/main.qml:2209"):54 | Unqualified access |
-| [main.qml:2214](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2214 "source/app/ui/qml/main.qml:2214"):54 | Unqualified access |
-| [main.qml:2219](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2219 "source/app/ui/qml/main.qml:2219"):54 | Unqualified access |
-| [main.qml:2224](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2224 "source/app/ui/qml/main.qml:2224"):54 | Unqualified access |
-| [main.qml:2230](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2230 "source/app/ui/qml/main.qml:2230"):54 | Unqualified access |
-| [main.qml:2236](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2236 "source/app/ui/qml/main.qml:2236"):54 | Unqualified access |
-| [main.qml:2241](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2241 "source/app/ui/qml/main.qml:2241"):54 | Unqualified access |
-| [main.qml:2352](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2352 "source/app/ui/qml/main.qml:2352"):14 | Unqualified access |
-| [main.qml:2384](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2384 "source/app/ui/qml/main.qml:2384"):17 | Unqualified access |
-| [main.qml:2395](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2395 "source/app/ui/qml/main.qml:2395"):19 | Unqualified access |
-| [main.qml:2398](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2398 "source/app/ui/qml/main.qml:2398"):16 | Unqualified access |
-| [main.qml:2407](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2407 "source/app/ui/qml/main.qml:2407"):17 | Unqualified access |
-| [main.qml:2409](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2409 "source/app/ui/qml/main.qml:2409"):43 | Unqualified access |
-| [main.qml:2410](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2410 "source/app/ui/qml/main.qml:2410"):47 | Unqualified access |
-| [main.qml:2415](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2415 "source/app/ui/qml/main.qml:2415"):17 | Unqualified access |
-| [main.qml:2419](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2419 "source/app/ui/qml/main.qml:2419"):40 | Unqualified access |
-| [main.qml:2425](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2425 "source/app/ui/qml/main.qml:2425"):42 | Unqualified access |
+| [main.qml:2085](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2085 "source/app/ui/qml/main.qml:2085"):30 | Unqualified access |
+| [main.qml:2099](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2099 "source/app/ui/qml/main.qml:2099"):26 | Unqualified access |
+| [main.qml:2139](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2139 "source/app/ui/qml/main.qml:2139"):45 | Unqualified access |
+| [main.qml:2144](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2144 "source/app/ui/qml/main.qml:2144"):25 | Unqualified access |
+| [main.qml:2149](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2149 "source/app/ui/qml/main.qml:2149"):24 | Unqualified access |
+| [main.qml:2154](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2154 "source/app/ui/qml/main.qml:2154"):27 | Unqualified access |
+| [main.qml:2160](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2160 "source/app/ui/qml/main.qml:2160"):32 | Unqualified access |
+| [main.qml:2177](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2177 "source/app/ui/qml/main.qml:2177"):30 | Unqualified access |
+| [main.qml:2185](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2185 "source/app/ui/qml/main.qml:2185"):64 | Unqualified access |
+| [main.qml:2186](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2186 "source/app/ui/qml/main.qml:2186"):64 | Unqualified access |
+| [main.qml:2187](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2187 "source/app/ui/qml/main.qml:2187"):64 | Unqualified access |
+| [main.qml:2188](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2188 "source/app/ui/qml/main.qml:2188"):64 | Unqualified access |
+| [main.qml:2189](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2189 "source/app/ui/qml/main.qml:2189"):64 | Unqualified access |
+| [main.qml:2201](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2201 "source/app/ui/qml/main.qml:2201"):54 | Unqualified access |
+| [main.qml:2206](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2206 "source/app/ui/qml/main.qml:2206"):54 | Unqualified access |
+| [main.qml:2211](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2211 "source/app/ui/qml/main.qml:2211"):54 | Unqualified access |
+| [main.qml:2216](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2216 "source/app/ui/qml/main.qml:2216"):54 | Unqualified access |
+| [main.qml:2221](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2221 "source/app/ui/qml/main.qml:2221"):54 | Unqualified access |
+| [main.qml:2226](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2226 "source/app/ui/qml/main.qml:2226"):54 | Unqualified access |
+| [main.qml:2231](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2231 "source/app/ui/qml/main.qml:2231"):54 | Unqualified access |
+| [main.qml:2237](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2237 "source/app/ui/qml/main.qml:2237"):54 | Unqualified access |
+| [main.qml:2243](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2243 "source/app/ui/qml/main.qml:2243"):54 | Unqualified access |
+| [main.qml:2248](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2248 "source/app/ui/qml/main.qml:2248"):54 | Unqualified access |
+| [main.qml:2359](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2359 "source/app/ui/qml/main.qml:2359"):14 | Unqualified access |
+| [main.qml:2391](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2391 "source/app/ui/qml/main.qml:2391"):17 | Unqualified access |
+| [main.qml:2402](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2402 "source/app/ui/qml/main.qml:2402"):19 | Unqualified access |
+| [main.qml:2405](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2405 "source/app/ui/qml/main.qml:2405"):16 | Unqualified access |
+| [main.qml:2414](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2414 "source/app/ui/qml/main.qml:2414"):17 | Unqualified access |
+| [main.qml:2416](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2416 "source/app/ui/qml/main.qml:2416"):43 | Unqualified access |
+| [main.qml:2417](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2417 "source/app/ui/qml/main.qml:2417"):47 | Unqualified access |
+| [main.qml:2422](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2422 "source/app/ui/qml/main.qml:2422"):17 | Unqualified access |
+| [main.qml:2426](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2426 "source/app/ui/qml/main.qml:2426"):40 | Unqualified access |
+| [main.qml:2432](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2432 "source/app/ui/qml/main.qml:2432"):42 | Unqualified access |
 | [main.qml:244](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L244 "source/updater/editor/main.qml:244"):38 | Unqualified access |
-| [main.qml:2594](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2594 "source/app/ui/qml/main.qml:2594"):25 | Unqualified access |
-| [main.qml:2679](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2679 "source/app/ui/qml/main.qml:2679"):31 | Unqualified access |
-| [main.qml:2799](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2799 "source/app/ui/qml/main.qml:2799"):23 | Unqualified access |
-| [main.qml:2825](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2825 "source/app/ui/qml/main.qml:2825"):23 | Unqualified access |
-| [main.qml:2831](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2831 "source/app/ui/qml/main.qml:2831"):24 | Unqualified access |
-| [main.qml:2832](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2832 "source/app/ui/qml/main.qml:2832"):26 | Unqualified access |
-| [main.qml:2833](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2833 "source/app/ui/qml/main.qml:2833"):32 | Unqualified access |
-| [main.qml:2839](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2839 "source/app/ui/qml/main.qml:2839"):25 | Unqualified access |
+| [main.qml:2601](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2601 "source/app/ui/qml/main.qml:2601"):25 | Unqualified access |
+| [main.qml:2686](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2686 "source/app/ui/qml/main.qml:2686"):31 | Unqualified access |
+| [main.qml:2806](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2806 "source/app/ui/qml/main.qml:2806"):23 | Unqualified access |
+| [main.qml:2832](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2832 "source/app/ui/qml/main.qml:2832"):23 | Unqualified access |
+| [main.qml:2838](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2838 "source/app/ui/qml/main.qml:2838"):24 | Unqualified access |
+| [main.qml:2839](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2839 "source/app/ui/qml/main.qml:2839"):26 | Unqualified access |
 | [main.qml:283](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L283 "source/updater/editor/main.qml:283"):13 | Unqualified access |
-| [main.qml:2844](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2844 "source/app/ui/qml/main.qml:2844"):24 | Unqualified access |
-| [main.qml:2851](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2851 "source/app/ui/qml/main.qml:2851"):58 | Unqualified access |
-| [main.qml:2862](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2862 "source/app/ui/qml/main.qml:2862"):26 | Unqualified access |
-| [main.qml:2891](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2891 "source/app/ui/qml/main.qml:2891"):26 | Unqualified access |
-| [main.qml:2907](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2907 "source/app/ui/qml/main.qml:2907"):26 | Unqualified access |
+| [main.qml:2840](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2840 "source/app/ui/qml/main.qml:2840"):32 | Unqualified access |
+| [main.qml:2846](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2846 "source/app/ui/qml/main.qml:2846"):25 | Unqualified access |
+| [main.qml:2851](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2851 "source/app/ui/qml/main.qml:2851"):24 | Unqualified access |
+| [main.qml:2858](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2858 "source/app/ui/qml/main.qml:2858"):58 | Unqualified access |
+| [main.qml:2869](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2869 "source/app/ui/qml/main.qml:2869"):26 | Unqualified access |
+| [main.qml:2898](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2898 "source/app/ui/qml/main.qml:2898"):26 | Unqualified access |
+| [main.qml:2914](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L2914 "source/app/ui/qml/main.qml:2914"):26 | Unqualified access |
 | [main.qml:310](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L310 "source/updater/editor/main.qml:310"):25 | Unqualified access |
 | [main.qml:328](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L328 "source/updater/editor/main.qml:328"):21 | Unqualified access |
 | [main.qml:336](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L336 "source/updater/editor/main.qml:336"):28 | Unqualified access |
@@ -1882,7 +1885,7 @@
 | [Hamburger.qml:20](https://github.com/graphia-app/graphia/blob/master/Controls/Hamburger.qml#L20 "Controls/Hamburger.qml:20"):1 | Unused import at /home/runner/work/graphia/graphia/source/app/ui/qml/app/graphia/Controls/Hamburger.qml:20:1 |
 | [HelpTooltip.qml:22](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/HelpTooltip.qml#L22 "Shared/Controls/HelpTooltip.qml:22"):1 | Unused import at /home/runner/work/graphia/graphia/source/shared/ui/qml/app/graphia/Shared/Controls/HelpTooltip.qml:22:1 |
 | [LatestChangesDialog.qml:24](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/LatestChangesDialog.qml#L24 "source/app/ui/qml/LatestChangesDialog.qml:24"):1 | Unused import at /home/runner/work/graphia/graphia/source/app/ui/qml/LatestChangesDialog.qml:24:1 |
-| [ManageBookmarks.qml:22](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L22 "source/app/ui/qml/ManageBookmarks.qml:22"):1 | Unused import at /home/runner/work/graphia/graphia/source/app/ui/qml/ManageBookmarks.qml:22:1 |
+| [ManageNamedListDialog.qml:22](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageNamedListDialog.qml#L22 "source/app/ui/qml/ManageNamedListDialog.qml:22"):1 | Unused import at /home/runner/work/graphia/graphia/source/app/ui/qml/ManageNamedListDialog.qml:22:1 |
 | [MappingSelector.qml:23](https://github.com/graphia-app/graphia/blob/master/Controls/MappingSelector.qml#L23 "Controls/MappingSelector.qml:23"):1 | Unused import at /home/runner/work/graphia/graphia/source/app/ui/qml/app/graphia/Controls/MappingSelector.qml:23:1 |
 | [NewUpdate.qml:24](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/NewUpdate.qml#L24 "source/app/ui/qml/NewUpdate.qml:24"):1 | Unused import at /home/runner/work/graphia/graphia/source/app/ui/qml/NewUpdate.qml:24:1 |
 | [NodeAttributeTableView.qml:26](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/NodeAttributeTableView.qml#L26 "Shared/Controls/NodeAttributeTableView.qml:26"):1 | Unused import at /home/runner/work/graphia/graphia/source/shared/ui/qml/app/graphia/Shared/Controls/NodeAttributeTableView.qml:26:1 |
@@ -1920,8 +1923,7 @@
 | [main.qml:26](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L26 "source/app/ui/qml/main.qml:26"):1 | Unused import at /home/runner/work/graphia/graphia/source/app/ui/qml/main.qml:26:1 |
 | [main.qml:29](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L29 "source/app/ui/qml/main.qml:29"):1 | Unused import at /home/runner/work/graphia/graphia/source/app/ui/qml/main.qml:29:1 |
 | <h3>warnings-occurred-while-importing-module</h3> | <h4>qmllint warning</h4> |
-| [ManageBookmarks.qml:25](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/ManageBookmarks.qml#L25 "source/app/ui/qml/ManageBookmarks.qml:25"):1 | Warnings occurred while importing module "app.graphia": |
-| [TreeBox.qml:24](https://github.com/graphia-app/graphia/blob/master/Controls/TreeBox.qml#L24 "Controls/TreeBox.qml:24"):1 | Warnings occurred while importing module "SortFilterProxyModel": |
+| [ImportAttributesDialog.qml:24](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Loading/ImportAttributesDialog.qml#L24 "source/app/ui/qml/Loading/ImportAttributesDialog.qml:24"):1 | Warnings occurred while importing module "app.graphia": |
 | <h3>was-not-found-did-you</h3> | <h4>qmllint warning</h4> |
 | [ChooserDialog.qml:85](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Loading/ChooserDialog.qml#L85 "source/app/ui/qml/Loading/ChooserDialog.qml:85"):24 | SortFilterProxyModel was not found. Did you add all import paths? |
 | [CloneAttributeDialog.qml:109](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/CloneAttributeDialog.qml#L109 "source/app/ui/qml/CloneAttributeDialog.qml:109"):13 | NamedIcon was not found. Did you add all import paths? |
@@ -2000,7 +2002,7 @@
 | [Visualisation.qml:204](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Visualisation/Visualisation.qml#L204 "source/app/ui/qml/Visualisation/Visualisation.qml:204"):9 | NamedIcon was not found. Did you add all import paths? |
 | [main.qml:1301](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1301 "source/app/ui/qml/main.qml:1301"):5 | Labs.FileDialog was not found. Did you add all import paths? |
 | [main.qml:133](https://github.com/graphia-app/graphia/blob/master/source/crashreporter/main.qml#L133 "source/crashreporter/main.qml:133"):9 | Labs.MessageDialog was not found. Did you add all import paths? |
-| [main.qml:1713](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1713 "source/app/ui/qml/main.qml:1713"):5 | Labs.MessageDialog was not found. Did you add all import paths? |
+| [main.qml:1718](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L1718 "source/app/ui/qml/main.qml:1718"):5 | Labs.MessageDialog was not found. Did you add all import paths? |
 | [main.qml:251](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L251 "source/updater/editor/main.qml:251"):5 | Labs.FileDialog was not found. Did you add all import paths? |
 | [main.qml:275](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L275 "source/updater/editor/main.qml:275"):5 | Labs.FileDialog was not found. Did you add all import paths? |
 | [main.qml:373](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L373 "source/app/ui/qml/main.qml:373"):5 | Labs.MessageDialog was not found. Did you add all import paths? |

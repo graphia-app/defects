@@ -1,5 +1,5 @@
 # Summary
-| Code | Severity | Tool | Count (1949) |
+| Code | Severity | Tool | Count (1947) |
 |---|---|---|---|
 | unqualified-access | warning | qmllint | 744 |
 | property-not-found-on-type | warning | qmllint | 442 |
@@ -22,7 +22,6 @@
 | property-is-variant-property-it | warning | qmllint | 5 |
 | qproperty-type-mismatch | warning | clazy | 5 |
 | cannot-defer-property-assignment-to | warning | qmllint | 3 |
-| performance-unnecessary-value-param | warning | clang-tidy | 2 |
 | type-is-method-you-cannot | warning | qmllint | 2 |
 | cannot-combine-value-source-and | warning | qmllint | 1 |
 | document-was-not-found-did | warning | qmllint | 1 |
@@ -404,9 +403,6 @@
 | [ToolBarButton.qml:29](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/+macos/ToolBarButton.qml#L29 "Shared/Controls/+macos/ToolBarButton.qml:29"):5 | No type found for property "selected". This may be due to a missing import statement or incomplete qmltypes files. |
 | <h3>parameter-to-signal-handler-for</h3> | <h4>qmllint warning</h4> |
 | [DataTable.qml:61](https://github.com/graphia-app/graphia/blob/master/Shared/Controls/DataTable.qml#L61 "Shared/Controls/DataTable.qml:61"):5 | Parameter 1 to signal handler for "onClicked" is called "mouse". The signal has a parameter of the same name in position 3. |
-| <h3>performance-unnecessary-value-param</h3> | <h4>clang-tidy warning</h4> |
-| [document.cpp:2471](https://github.com/graphia-app/graphia/blob/master/source/app/ui/document.cpp#L2471 "source/app/ui/document.cpp:2471"):63 | the parameter 'visualisations' is copied for each invocation but only used as a const reference; consider making it a const reference |
-| [document.cpp:2535](https://github.com/graphia-app/graphia/blob/master/source/app/ui/document.cpp#L2535 "source/app/ui/document.cpp:2535"):67 | the parameter 'newVisualisations' is copied for each invocation but only used as a const reference; consider making it a const reference |
 | <h3>preferences-was-not-found-did</h3> | <h4>qmllint warning</h4> |
 | [CaptureScreenshotDialog.qml:53](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/CaptureScreenshotDialog.qml#L53 "source/app/ui/qml/CaptureScreenshotDialog.qml:53"):5 | Preferences was not found. Did you add all import paths? |
 | [CaptureScreenshotDialog.qml:62](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/CaptureScreenshotDialog.qml#L62 "source/app/ui/qml/CaptureScreenshotDialog.qml:62"):5 | Preferences was not found. Did you add all import paths? |

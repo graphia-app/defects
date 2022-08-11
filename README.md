@@ -1,8 +1,8 @@
 # Summary
-| Code | Severity | Tool | Count (1964) |
+| Code | Severity | Tool | Count (1965) |
 |---|---|---|---|
 | unqualified-access | warning | qmllint | 750 |
-| property-not-found-on-type | warning | qmllint | 448 |
+| property-not-found-on-type | warning | qmllint | 449 |
 | binding-assigned-to-but-no | warning | qmllint | 233 |
 | signal-handler-for-has-more | warning | qmllint | 174 |
 | was-not-found-did-you | warning | qmllint | 89 |
@@ -208,8 +208,8 @@
 | [OptionsDefaults.qml:134](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsDefaults.qml#L134 "source/app/ui/qml/Options/OptionsDefaults.qml:134"):39 | Binding assigned to "expression", but no property "expression" exists in the current element. |
 | [OptionsDefaults.qml:40](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsDefaults.qml#L40 "source/app/ui/qml/Options/OptionsDefaults.qml:40"):9 | Binding assigned to "section", but no property "section" exists in the current element. |
 | [OptionsMisc.qml:34](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L34 "source/app/ui/qml/Options/OptionsMisc.qml:34"):9 | Binding assigned to "section", but no property "section" exists in the current element. |
-| [OptionsMisc.qml:46](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L46 "source/app/ui/qml/Options/OptionsMisc.qml:46"):9 | Binding assigned to "section", but no property "section" exists in the current element. |
-| [OptionsMisc.qml:53](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L53 "source/app/ui/qml/Options/OptionsMisc.qml:53"):9 | Binding assigned to "section", but no property "section" exists in the current element. |
+| [OptionsMisc.qml:47](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L47 "source/app/ui/qml/Options/OptionsMisc.qml:47"):9 | Binding assigned to "section", but no property "section" exists in the current element. |
+| [OptionsMisc.qml:54](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L54 "source/app/ui/qml/Options/OptionsMisc.qml:54"):9 | Binding assigned to "section", but no property "section" exists in the current element. |
 | [OptionsNetwork.qml:36](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsNetwork.qml#L36 "source/app/ui/qml/Options/OptionsNetwork.qml:36"):9 | Binding assigned to "section", but no property "section" exists in the current element. |
 | [OptionsNetwork.qml:45](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsNetwork.qml#L45 "source/app/ui/qml/Options/OptionsNetwork.qml:45"):9 | Binding assigned to "section", but no property "section" exists in the current element. |
 | [OptionsNetwork.qml:57](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsNetwork.qml#L57 "source/app/ui/qml/Options/OptionsNetwork.qml:57"):9 | Binding assigned to "section", but no property "section" exists in the current element. |
@@ -424,8 +424,8 @@
 | [OptionsAppearance.qml:55](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsAppearance.qml#L55 "source/app/ui/qml/Options/OptionsAppearance.qml:55"):5 | Preferences was not found. Did you add all import paths? |
 | [OptionsDefaults.qml:37](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsDefaults.qml#L37 "source/app/ui/qml/Options/OptionsDefaults.qml:37"):5 | Preferences was not found. Did you add all import paths? |
 | [OptionsMisc.qml:31](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L31 "source/app/ui/qml/Options/OptionsMisc.qml:31"):5 | Preferences was not found. Did you add all import paths? |
-| [OptionsMisc.qml:43](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L43 "source/app/ui/qml/Options/OptionsMisc.qml:43"):5 | Preferences was not found. Did you add all import paths? |
-| [OptionsMisc.qml:50](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L50 "source/app/ui/qml/Options/OptionsMisc.qml:50"):5 | Preferences was not found. Did you add all import paths? |
+| [OptionsMisc.qml:44](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L44 "source/app/ui/qml/Options/OptionsMisc.qml:44"):5 | Preferences was not found. Did you add all import paths? |
+| [OptionsMisc.qml:51](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L51 "source/app/ui/qml/Options/OptionsMisc.qml:51"):5 | Preferences was not found. Did you add all import paths? |
 | [OptionsNetwork.qml:33](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsNetwork.qml#L33 "source/app/ui/qml/Options/OptionsNetwork.qml:33"):5 | Preferences was not found. Did you add all import paths? |
 | [OptionsNetwork.qml:42](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsNetwork.qml#L42 "source/app/ui/qml/Options/OptionsNetwork.qml:42"):5 | Preferences was not found. Did you add all import paths? |
 | [OptionsNetwork.qml:54](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsNetwork.qml#L54 "source/app/ui/qml/Options/OptionsNetwork.qml:54"):5 | Preferences was not found. Did you add all import paths? |
@@ -724,13 +724,14 @@
 | [OptionsDefaults.qml:281](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsDefaults.qml#L281 "source/app/ui/qml/Options/OptionsDefaults.qml:281"):54 | Property "spacing" not found on type "Constants" |
 | [OptionsDefaults.qml:282](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsDefaults.qml#L282 "source/app/ui/qml/Options/OptionsDefaults.qml:282"):51 | Property "spacing" not found on type "Constants" |
 | [OptionsDialog.qml:49](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsDialog.qml#L49 "source/app/ui/qml/Options/OptionsDialog.qml:49"):36 | Property "margin" not found on type "Constants" |
-| [OptionsMisc.qml:116](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L116 "source/app/ui/qml/Options/OptionsMisc.qml:116"):45 | Property "margin" not found on type "Constants" |
-| [OptionsMisc.qml:133](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L133 "source/app/ui/qml/Options/OptionsMisc.qml:133"):32 | Property "spacing" not found on type "Constants" |
-| [OptionsMisc.qml:167](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L167 "source/app/ui/qml/Options/OptionsMisc.qml:167"):45 | Property "margin" not found on type "Constants" |
-| [OptionsMisc.qml:61](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L61 "source/app/ui/qml/Options/OptionsMisc.qml:61"):36 | Property "margin" not found on type "Constants" |
-| [OptionsMisc.qml:62](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L62 "source/app/ui/qml/Options/OptionsMisc.qml:62"):28 | Property "spacing" not found on type "Constants" |
-| [OptionsMisc.qml:66](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L66 "source/app/ui/qml/Options/OptionsMisc.qml:66"):32 | Property "spacing" not found on type "Constants" |
-| [OptionsMisc.qml:91](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L91 "source/app/ui/qml/Options/OptionsMisc.qml:91"):46 | Property "margin" not found on type "Constants" |
+| [OptionsMisc.qml:117](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L117 "source/app/ui/qml/Options/OptionsMisc.qml:117"):45 | Property "margin" not found on type "Constants" |
+| [OptionsMisc.qml:131](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L131 "source/app/ui/qml/Options/OptionsMisc.qml:131"):45 | Property "margin" not found on type "Constants" |
+| [OptionsMisc.qml:148](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L148 "source/app/ui/qml/Options/OptionsMisc.qml:148"):32 | Property "spacing" not found on type "Constants" |
+| [OptionsMisc.qml:182](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L182 "source/app/ui/qml/Options/OptionsMisc.qml:182"):45 | Property "margin" not found on type "Constants" |
+| [OptionsMisc.qml:62](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L62 "source/app/ui/qml/Options/OptionsMisc.qml:62"):36 | Property "margin" not found on type "Constants" |
+| [OptionsMisc.qml:63](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L63 "source/app/ui/qml/Options/OptionsMisc.qml:63"):28 | Property "spacing" not found on type "Constants" |
+| [OptionsMisc.qml:67](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L67 "source/app/ui/qml/Options/OptionsMisc.qml:67"):32 | Property "spacing" not found on type "Constants" |
+| [OptionsMisc.qml:92](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L92 "source/app/ui/qml/Options/OptionsMisc.qml:92"):46 | Property "margin" not found on type "Constants" |
 | [OptionsNetwork.qml:100](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsNetwork.qml#L100 "source/app/ui/qml/Options/OptionsNetwork.qml:100"):36 | Property "margin" not found on type "Constants" |
 | [OptionsNetwork.qml:101](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsNetwork.qml#L101 "source/app/ui/qml/Options/OptionsNetwork.qml:101"):28 | Property "spacing" not found on type "Constants" |
 | [OptionsNetwork.qml:105](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsNetwork.qml#L105 "source/app/ui/qml/Options/OptionsNetwork.qml:105"):32 | Property "spacing" not found on type "Constants" |
@@ -1509,7 +1510,7 @@
 | [OptionsDefaults.qml:306](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsDefaults.qml#L306 "source/app/ui/qml/Options/OptionsDefaults.qml:306"):49 | Unqualified access |
 | [OptionsDefaults.qml:311](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsDefaults.qml#L311 "source/app/ui/qml/Options/OptionsDefaults.qml:311"):72 | Unqualified access |
 | [OptionsDefaults.qml:312](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsDefaults.qml#L312 "source/app/ui/qml/Options/OptionsDefaults.qml:312"):78 | Unqualified access |
-| [OptionsMisc.qml:159](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L159 "source/app/ui/qml/Options/OptionsMisc.qml:159"):81 | Unqualified access |
+| [OptionsMisc.qml:174](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsMisc.qml#L174 "source/app/ui/qml/Options/OptionsMisc.qml:174"):81 | Unqualified access |
 | [OptionsNetwork.qml:194](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/Options/OptionsNetwork.qml#L194 "source/app/ui/qml/Options/OptionsNetwork.qml:194"):28 | Unqualified access |
 | [PairwiseParameters.qml:291](https://github.com/graphia-app/graphia/blob/master/source/plugins/generic/ui/qml/PairwiseParameters.qml#L291 "source/plugins/generic/ui/qml/PairwiseParameters.qml:291"):122 | Unqualified access |
 | [PairwiseParameters.qml:292](https://github.com/graphia-app/graphia/blob/master/source/plugins/generic/ui/qml/PairwiseParameters.qml#L292 "source/plugins/generic/ui/qml/PairwiseParameters.qml:292"):122 | Unqualified access |

@@ -1,8 +1,8 @@
 # Summary
 | Code | Severity | Tool | Count (1965) |
 |---|---|---|---|
-| unqualified-access | warning | qmllint | 750 |
-| property-not-found-on-type | warning | qmllint | 449 |
+| unqualified-access | warning | qmllint | 751 |
+| property-not-found-on-type | warning | qmllint | 448 |
 | binding-assigned-to-but-no | warning | qmllint | 233 |
 | signal-handler-for-has-more | warning | qmllint | 174 |
 | was-not-found-did-you | warning | qmllint | 89 |
@@ -892,7 +892,6 @@
 | [main.qml:43](https://github.com/graphia-app/graphia/blob/master/source/updater/main.qml#L43 "source/updater/main.qml:43"):36 | Property "margin" not found on type "Constants" |
 | [main.qml:47](https://github.com/graphia-app/graphia/blob/master/source/crashreporter/main.qml#L47 "source/crashreporter/main.qml:47"):36 | Property "margin" not found on type "Constants" |
 | [main.qml:516](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L516 "source/updater/editor/main.qml:516"):24 | Property "FileDialog" not found on type "Labs.FileDialog" |
-| [main.qml:539](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L539 "source/app/ui/qml/main.qml:539"):46 | Property "checkedAction" not found on type "Action" |
 | [main.qml:552](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L552 "source/updater/editor/main.qml:552"):23 | Property "MessageDialog" not found on type "Labs.MessageDialog" |
 | [main.qml:56](https://github.com/graphia-app/graphia/blob/master/source/crashreporter/main.qml#L56 "source/crashreporter/main.qml:56"):39 | Property "margin" not found on type "Constants" |
 | [main.qml:578](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L578 "source/updater/editor/main.qml:578"):31 | Property "open" not found on type "Labs.MessageDialog" |
@@ -1857,6 +1856,7 @@
 | [main.qml:446](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L446 "source/app/ui/qml/main.qml:446"):15 | Unqualified access |
 | [main.qml:47](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L47 "source/updater/editor/main.qml:47"):17 | Unqualified access |
 | [main.qml:521](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L521 "source/updater/editor/main.qml:521"):23 | Unqualified access |
+| [main.qml:540](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L540 "source/app/ui/qml/main.qml:540"):17 | Unqualified access |
 | [main.qml:547](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L547 "source/app/ui/qml/main.qml:547"):53 | Unqualified access |
 | [main.qml:558](https://github.com/graphia-app/graphia/blob/master/source/app/ui/qml/main.qml#L558 "source/app/ui/qml/main.qml:558"):53 | Unqualified access |
 | [main.qml:564](https://github.com/graphia-app/graphia/blob/master/source/updater/editor/main.qml#L564 "source/updater/editor/main.qml:564"):13 | Unqualified access |

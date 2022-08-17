@@ -1,14 +1,11 @@
 # Summary
-| Code | Severity | Tool | Count (7) |
+| Code | Severity | Tool | Count (6) |
 |---|---|---|---|
 | qproperty-type-mismatch | warning | clazy | 5 |
-| bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions | warning | clang-tidy | 1 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
-| <h3>bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions</h3> | <h4>clang-tidy warning</h4> |
-| [tableproxymodel.cpp:88](https://github.com/graphia-app/graphia/blob/master/source/shared/plugins/tableproxymodel.cpp#L88 "source/shared/plugins/tableproxymodel.cpp:88"):23 | narrowing conversion from 'std::vector::size_type' (aka 'unsigned long') to signed type 'qsizetype' (aka 'long long') is implementation-defined |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [elementid.h:60](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/elementid.h#L60 "source/shared/graph/elementid.h:60"):63 | use nullptr |
 | <h3>qproperty-type-mismatch</h3> | <h4>clazy warning</h4> |

@@ -1,15 +1,11 @@
 # Summary
-| Code | Severity | Tool | Count (8) |
+| Code | Severity | Tool | Count (6) |
 |---|---|---|---|
 | qproperty-type-mismatch | warning | clazy | 5 |
-| bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions | warning | clang-tidy | 2 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
-| <h3>bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions</h3> | <h4>clang-tidy warning</h4> |
-| [correlationfileparser.cpp:359](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/loading/correlationfileparser.cpp#L359 "source/plugins/correlation/loading/correlationfileparser.cpp:359"):63 | narrowing conversion from 'unsigned long' to 'double' |
-| [correlationfileparser.cpp:363](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/loading/correlationfileparser.cpp#L363 "source/plugins/correlation/loading/correlationfileparser.cpp:363"):46 | narrowing conversion from 'unsigned long' to signed type '__gnu_cxx::__normal_iterator<unsigned long *, std::vector<unsigned long>>::difference_type' (aka 'long') is implementation-defined |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [elementid.h:60](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/elementid.h#L60 "source/shared/graph/elementid.h:60"):63 | use nullptr |
 | <h3>qproperty-type-mismatch</h3> | <h4>clazy warning</h4> |

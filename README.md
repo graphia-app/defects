@@ -1,11 +1,16 @@
 # Summary
-| Code | Severity | Tool | Count (6) |
+| Code | Severity | Tool | Count (9) |
 |---|---|---|---|
 | qproperty-type-mismatch | warning | clazy | 5 |
+| bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions | warning | clang-tidy | 3 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
+| <h3>bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions</h3> | <h4>clang-tidy warning</h4> |
+| [graphcommoninteractor.cpp:408](https://github.com/graphia-app/graphia/blob/master/source/app/ui/graphcommoninteractor.cpp#L408 "source/app/ui/graphcommoninteractor.cpp:408"):38 | narrowing conversion from 'QFlags<Qt::KeyboardModifier>::Int' (aka 'unsigned int') to signed type 'int' is implementation-defined |
+| [graphcommoninteractor.cpp:463](https://github.com/graphia-app/graphia/blob/master/source/app/ui/graphcommoninteractor.cpp#L463 "source/app/ui/graphcommoninteractor.cpp:463"):39 | narrowing conversion from 'QFlags<Qt::KeyboardModifier>::Int' (aka 'unsigned int') to signed type 'int' is implementation-defined |
+| [graphcommoninteractor.cpp:482](https://github.com/graphia-app/graphia/blob/master/source/app/ui/graphcommoninteractor.cpp#L482 "source/app/ui/graphcommoninteractor.cpp:482"):40 | narrowing conversion from 'QFlags<Qt::KeyboardModifier>::Int' (aka 'unsigned int') to signed type 'int' is implementation-defined |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [elementid.h:60](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/elementid.h#L60 "source/shared/graph/elementid.h:60"):63 | use nullptr |
 | <h3>qproperty-type-mismatch</h3> | <h4>clazy warning</h4> |

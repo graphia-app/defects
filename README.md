@@ -1,18 +1,11 @@
 # Summary
-| Code | Severity | Tool | Count (9) |
+| Code | Severity | Tool | Count (6) |
 |---|---|---|---|
 | qproperty-type-mismatch | warning | clazy | 5 |
-| cert-err33-c | warning | clang-tidy | 2 |
-| clang-analyzer-deadcode.DeadStores | warning | clang-tidy | 1 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
-| <h3>cert-err33-c</h3> | <h4>clang-tidy warning</h4> |
-| [application.cpp:606](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L606 "source/app/application.cpp:606"):42 | the value returned by this function should be used |
-| [application.cpp:607](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L607 "source/app/application.cpp:607"):42 | the value returned by this function should be used |
-| <h3>clang-analyzer-deadcode.DeadStores</h3> | <h4>clang-tidy warning</h4> |
-| [application.cpp:606](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L606 "source/app/application.cpp:606"):5 | Value stored to 'bytes' is never read |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [elementid.h:60](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/elementid.h#L60 "source/shared/graph/elementid.h:60"):63 | use nullptr |
 | <h3>qproperty-type-mismatch</h3> | <h4>clazy warning</h4> |

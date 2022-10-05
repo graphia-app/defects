@@ -1,11 +1,17 @@
 # Summary
-| Code | Severity | Tool | Count (6) |
+| Code | Severity | Tool | Count (10) |
 |---|---|---|---|
 | qproperty-type-mismatch | warning | clazy | 5 |
+| cert-err33-c | warning | clang-tidy | 4 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
+| <h3>cert-err33-c</h3> | <h4>clang-tidy warning</h4> |
+| [application.cpp:605](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L605 "source/app/application.cpp:605"):34 | the value returned by this function should be used |
+| [application.cpp:605](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L605 "source/app/application.cpp:605"):5 | the value returned by this function should be used |
+| [application.cpp:606](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L606 "source/app/application.cpp:606"):34 | the value returned by this function should be used |
+| [application.cpp:606](https://github.com/graphia-app/graphia/blob/master/source/app/application.cpp#L606 "source/app/application.cpp:606"):5 | the value returned by this function should be used |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [elementid.h:60](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/elementid.h#L60 "source/shared/graph/elementid.h:60"):63 | use nullptr |
 | <h3>qproperty-type-mismatch</h3> | <h4>clazy warning</h4> |

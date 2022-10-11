@@ -1,11 +1,14 @@
 # Summary
-| Code | Severity | Tool | Count (6) |
+| Code | Severity | Tool | Count (7) |
 |---|---|---|---|
 | qproperty-type-mismatch | warning | clazy | 5 |
+| bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions | warning | clang-tidy | 1 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
+| <h3>bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions</h3> | <h4>clang-tidy warning</h4> |
+| [scopetimer.cpp:89](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/scopetimer.cpp#L89 "source/shared/utils/scopetimer.cpp:89"):25 | narrowing conversion from '__gnu_cxx::__alloc_traits<std::allocator<long long>, long long>::value_type' (aka 'long long') to 'double' |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [elementid.h:60](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/elementid.h#L60 "source/shared/graph/elementid.h:60"):63 | use nullptr |
 | <h3>qproperty-type-mismatch</h3> | <h4>clazy warning</h4> |

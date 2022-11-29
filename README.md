@@ -1,9 +1,9 @@
 # Summary
-| Code | Severity | Tool | Count (8) |
+| Code | Severity | Tool | Count (7) |
 |---|---|---|---|
 | qproperty-type-mismatch | warning | clazy | 5 |
-| reserve-candidates | warning | clazy | 2 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
+| reserve-candidates | warning | clazy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -17,4 +17,3 @@
 | [visualisationmappingplotitem.h:55](https://github.com/graphia-app/graphia/blob/master/source/app/ui/visualisations/visualisationmappingplotitem.h#L55 "source/app/ui/visualisations/visualisationmappingplotitem.h:55"):5 | Q_PROPERTY 'values' of type 'QVector<double>' is mismatched with method 'setValues' with parameter of type 'QList<double>' |
 | <h3>reserve-candidates</h3> | <h4>clazy warning</h4> |
 | [correlationplugin.cpp:723](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/correlationplugin.cpp#L723 "source/plugins/correlation/correlationplugin.cpp:723"):9 | Reserve candidate |
-| [correlationplugin.cpp:733](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/correlationplugin.cpp#L733 "source/plugins/correlation/correlationplugin.cpp:733"):9 | Reserve candidate |

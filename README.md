@@ -1,8 +1,7 @@
 # Summary
-| Code | Severity | Tool | Count (9) |
+| Code | Severity | Tool | Count (7) |
 |---|---|---|---|
 | qproperty-type-mismatch | warning | clazy | 5 |
-| qstring-arg | warning | clazy | 2 |
 | bugprone-exception-escape | warning | clang-tidy | 1 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 # Details
@@ -18,6 +17,3 @@
 | [correlationplugin.h:149](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/correlationplugin.h#L149 "source/plugins/correlation/correlationplugin.h:149"):5 | Q_PROPERTY 'highlightedRows' of type 'QVector<int>' is mismatched with method 'setHighlightedRows' with parameter of type 'QList<int>' |
 | [modelcompleter.h:47](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/modelcompleter.h#L47 "source/shared/utils/modelcompleter.h:47"):5 | Q_PROPERTY 'candidates' of type 'QVector<QModelIndex>' is mismatched with method 'candidates' of return type 'QList<QModelIndex>' |
 | [visualisationmappingplotitem.h:55](https://github.com/graphia-app/graphia/blob/master/source/app/ui/visualisations/visualisationmappingplotitem.h#L55 "source/app/ui/visualisations/visualisationmappingplotitem.h:55"):5 | Q_PROPERTY 'values' of type 'QVector<double>' is mismatched with method 'setValues' with parameter of type 'QList<double>' |
-| <h3>qstring-arg</h3> | <h4>clazy warning</h4> |
-| [correlationplugin.cpp:719](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/correlationplugin.cpp#L719 "source/plugins/correlation/correlationplugin.cpp:719"):34 | Use multi-arg instead |
-| [correlationplugin.cpp:736](https://github.com/graphia-app/graphia/blob/master/source/plugins/correlation/correlationplugin.cpp#L736 "source/plugins/correlation/correlationplugin.cpp:736"):34 | Use multi-arg instead |

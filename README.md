@@ -1,14 +1,17 @@
 # Summary
-| Code | Severity | Tool | Count (7) |
+| Code | Severity | Tool | Count (8) |
 |---|---|---|---|
 | qproperty-type-mismatch | warning | clazy | 5 |
 | bugprone-exception-escape | warning | clang-tidy | 1 |
+| connect-non-signal | warning | clazy | 1 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
 | <h3>bugprone-exception-escape</h3> | <h4>clang-tidy warning</h4> |
 | [dotfileparser.cpp:59](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/dotfileparser.cpp#L59 "source/shared/loading/dotfileparser.cpp:59"):8 | an exception may be thrown in function 'operator=' which should not throw exceptions |
+| <h3>connect-non-signal</h3> | <h4>clazy warning</h4> |
+| [qmlpreferences.cpp:75](https://github.com/graphia-app/graphia/blob/master/source/app/qmlpreferences.cpp#L75 "source/app/qmlpreferences.cpp:75"):17 | couldn't find method from pmf connect, please report a bug |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [elementid.h:62](https://github.com/graphia-app/graphia/blob/master/source/shared/graph/elementid.h#L62 "source/shared/graph/elementid.h:62"):63 | use nullptr |
 | <h3>qproperty-type-mismatch</h3> | <h4>clazy warning</h4> |

@@ -1,13 +1,19 @@
 # Summary
-| Code | Severity | Tool | Count (8) |
+| Code | Severity | Tool | Count (10) |
 |---|---|---|---|
 | qproperty-type-mismatch | warning | clazy | 5 |
+| C6320 | warning | msvc | 1 |
+| C6322 | warning | msvc | 1 |
 | bugprone-exception-escape | warning | clang-tidy | 1 |
 | connect-non-signal | warning | clazy | 1 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
+| <h3>C6320</h3> | <h4>msvc warning</h4> |
+| [thread.h:137](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/thread.h#L137 "source/shared/utils/thread.h:137") | Exception-filter expression is the constant EXCEPTION_EXECUTE_HANDLER. This might mask exceptions that were not intended to be handled. |
+| <h3>C6322</h3> | <h4>msvc warning</h4> |
+| [thread.h:138](https://github.com/graphia-app/graphia/blob/master/source/shared/utils/thread.h#L138 "source/shared/utils/thread.h:138") | Empty _except block. |
 | <h3>bugprone-exception-escape</h3> | <h4>clang-tidy warning</h4> |
 | [dotfileparser.cpp:59](https://github.com/graphia-app/graphia/blob/master/source/shared/loading/dotfileparser.cpp#L59 "source/shared/loading/dotfileparser.cpp:59"):8 | an exception may be thrown in function 'operator=' which should not throw exceptions |
 | <h3>connect-non-signal</h3> | <h4>clazy warning</h4> |

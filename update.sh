@@ -74,7 +74,7 @@ find ${LOGS} -iname "*.log" -print0 | xargs -0 ./compiler-logs-to-table.pl --sum
 echo "# Details" >> README.md
 find ${LOGS} -iname "*.log" -print0 | xargs -0 ./compiler-logs-to-table.pl --markdown \
     --filter "^.*graphia/" --filter ".*thirdparty.*" --filter "^Qt.*" --filter "^\/usr\/.*" \
-    --link "https://github.com/graphia-app/graphia/blob/${BRANCH}/%file#L%line" >> README.md
+    --link "https://github.com/graphia-app/graphia/blame/${BRANCH}/%file#L%line" >> README.md
 
 git add README.md
 git diff-index --quiet HEAD || git commit -m "${MESSAGE}" && git push --force --set-upstream origin ${BRANCH}

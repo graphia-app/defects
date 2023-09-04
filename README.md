@@ -1,20 +1,14 @@
 # Summary
-| Code | Severity | Tool | Count (10) |
+| Code | Severity | Tool | Count (8) |
 |---|---|---|---|
 | qproperty-type-mismatch | warning | clazy | 6 |
 | bugprone-exception-escape | warning | clang-tidy | 1 |
-| clang-diagnostic-defaulted-function-deleted | warning | clang-tidy | 1 |
-| defaulted-function-deleted | warning | generic | 1 |
 | modernize-use-nullptr | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
 | <h3>bugprone-exception-escape</h3> | <h4>clang-tidy warning</h4> |
 | [dotfileparser.cpp:59](https://github.com/graphia-app/graphia/blame/master/source/shared/loading/dotfileparser.cpp#L59 "source/shared/loading/dotfileparser.cpp:59"):8 | an exception may be thrown in function 'operator=' which should not throw exceptions |
-| <h3>clang-diagnostic-defaulted-function-deleted</h3> | <h4>clang-tidy warning</h4> |
-| [columnannotation.h:54](https://github.com/graphia-app/graphia/blame/master/source/plugins/correlation/columnannotation.h#L54 "source/plugins/correlation/columnannotation.h:54"):10 | explicitly defaulted three-way comparison operator is implicitly deleted |
-| <h3>defaulted-function-deleted</h3> | <h4>generic warning</h4> |
-| [columnannotation.h:54](https://github.com/graphia-app/graphia/blame/master/source/plugins/correlation/columnannotation.h#L54 "source/plugins/correlation/columnannotation.h:54"):10 | explicitly defaulted three-way comparison operator is implicitly deleted |
 | <h3>modernize-use-nullptr</h3> | <h4>clang-tidy warning</h4> |
 | [elementid.h:62](https://github.com/graphia-app/graphia/blame/master/source/shared/graph/elementid.h#L62 "source/shared/graph/elementid.h:62"):63 | use nullptr |
 | <h3>qproperty-type-mismatch</h3> | <h4>clazy warning</h4> |

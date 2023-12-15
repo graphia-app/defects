@@ -1,13 +1,17 @@
 # Summary
-| Code | Severity | Tool | Count (7) |
+| Code | Severity | Tool | Count (9) |
 |---|---|---|---|
 | qproperty-type-mismatch | warning | clazy | 6 |
+| misc-const-correctness | warning | clang-tidy | 2 |
 | bugprone-exception-escape | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
 | <h3>bugprone-exception-escape</h3> | <h4>clang-tidy warning</h4> |
 | [dotfileparser.cpp:59](https://github.com/graphia-app/graphia/blame/master/source/shared/loading/dotfileparser.cpp#L59 "source/shared/loading/dotfileparser.cpp:59"):8 | an exception may be thrown in function 'operator=' which should not throw exceptions |
+| <h3>misc-const-correctness</h3> | <h4>clang-tidy warning</h4> |
+| [dotfileparser.cpp:431](https://github.com/graphia-app/graphia/blame/master/source/shared/loading/dotfileparser.cpp#L431 "source/shared/loading/dotfileparser.cpp:431"):5 | variable 'success' of type 'bool' can be declared 'const' |
+| [gmlfileparser.cpp:337](https://github.com/graphia-app/graphia/blame/master/source/shared/loading/gmlfileparser.cpp#L337 "source/shared/loading/gmlfileparser.cpp:337"):5 | variable 'success' of type 'bool' can be declared 'const' |
 | <h3>qproperty-type-mismatch</h3> | <h4>clazy warning</h4> |
 | [basegenericplugin.h:84](https://github.com/graphia-app/graphia/blame/master/source/shared/plugins/basegenericplugin.h#L84 "source/shared/plugins/basegenericplugin.h:84"):5 | Q_PROPERTY 'highlightedRows' of type 'QVector<int>' is mismatched with method 'setHighlightedRows' with parameter of type 'QList<int>' |
 | [correlationplotitem.h:249](https://github.com/graphia-app/graphia/blame/master/source/plugins/correlation/correlationplotitem.h#L249 "source/plugins/correlation/correlationplotitem.h:249"):5 | Q_PROPERTY 'selectedRows' of type 'QVector<int>' is mismatched with method 'setSelectedRows' with parameter of type 'QList<int>' |

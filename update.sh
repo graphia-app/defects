@@ -65,7 +65,7 @@ then
 fi
 
 echo "Analysing Logs on branch: ${BRANCH}"
-git checkout -tb ${BRANCH} origin/${BRANCH} || git checkout -b ${BRANCH} || git checkout ${BRANCH}
+git checkout --track=direct -b ${BRANCH} origin/${BRANCH} || git checkout -b ${BRANCH} || git checkout ${BRANCH}
 
 echo "# Summary" > README.md
 find ${LOGS} -iname "*.log" -print0 | xargs -0 ./compiler-logs-to-table.pl --summary --markdown \

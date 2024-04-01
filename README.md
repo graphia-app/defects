@@ -1,8 +1,7 @@
 # Summary
-| Code | Severity | Tool | Count (5) |
+| Code | Severity | Tool | Count (3) |
 |---|---|---|---|
 | cppcoreguidelines-missing-std-forward | warning | clang-tidy | 2 |
-| range-loop-detach | warning | clazy | 2 |
 | qproperty-type-mismatch | warning | clazy | 1 |
 # Details
 | File:Line:Column | Message |
@@ -12,6 +11,3 @@
 | [threadpool.h:66](https://github.com/graphia-app/graphia/blame/master/source/shared/utils/threadpool.h#L66 "source/shared/utils/threadpool.h:66"):109 | forwarding reference parameter 'args' is never forwarded inside the function body |
 | <h3>qproperty-type-mismatch</h3> | <h4>clazy warning</h4> |
 | [correlationplotitem.h:426](https://github.com/graphia-app/graphia/blame/master/source/plugins/correlation/correlationplotitem.h#L426 "source/plugins/correlation/correlationplotitem.h:426"):5 | Q_PROPERTY 'selectedColumns' of type 'std::vector<size_t>' is mismatched with method 'selectedColumns' of return type 'vector<unsignedlong>' |
-| <h3>range-loop-detach</h3> | <h4>clazy warning</h4> |
-| [qrcextract.cpp:37](https://github.com/graphia-app/graphia/blame/master/source/shared/utils/qrcextract.cpp#L37 "source/shared/utils/qrcextract.cpp:37"):5 | c++11 range-loop might detach Qt container (QStringList) |
-| [qrcextract.cpp:52](https://github.com/graphia-app/graphia/blame/master/source/shared/utils/qrcextract.cpp#L52 "source/shared/utils/qrcextract.cpp:52"):5 | c++11 range-loop might detach Qt container (QStringList) |

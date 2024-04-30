@@ -67,13 +67,19 @@ fi
 echo "Analysing Logs on branch: ${BRANCH}"
 git checkout --track=direct -b ${BRANCH} origin/${BRANCH} || git checkout -b ${BRANCH} || git checkout ${BRANCH}
 
+FILTERS=(".*\/thirdparty\/.*" ".*\/Qt.*" "^\/usr\/.*" ".*\/build\/.*" "^.*graphia\/")
+for FILTER in "${FILTERS[@]}"
+do
+    FILTER_ARGUMENTS+="--filter \"${FILTER}\" "
+done
+
 echo "# Summary" > README.md
-find ${LOGS} -iname "*.log" -print0 | xargs -0 ./compiler-logs-to-table.pl --summary --markdown \
-    --filter "^.*graphia/" --filter ".*thirdparty.*" --filter "^Qt.*" --filter "^\/usr\/.*" >> README.md
+find ${LOGS} -iname "*.log" -print0 | xargs -0 \
+    ./compiler-logs-to-table.pl --summary --markdown ${FILTER_ARGUMENTS} >> README.md
 
 echo "# Details" >> README.md
-find ${LOGS} -iname "*.log" -print0 | xargs -0 ./compiler-logs-to-table.pl --markdown \
-    --filter "^.*graphia/" --filter ".*thirdparty.*" --filter "^Qt.*" --filter "^\/usr\/.*" \
+find ${LOGS} -iname "*.log" -print0 | xargs -0 \
+    ./compiler-logs-to-table.pl --markdown ${FILTER_ARGUMENTS} \
     --link "https://github.com/graphia-app/graphia/blame/${BRANCH}/%file#L%line" >> README.md
 
 git add README.md

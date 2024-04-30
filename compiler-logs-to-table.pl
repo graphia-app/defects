@@ -92,6 +92,9 @@ sub optionHandler
     $outputStyle = $optionName;
 }
 
+# Remove enclosing quotes
+@filterRegexes = map { s/^"(.*)"$/$1/; $_ } @filterRegexes;
+
 if(scalar @ARGV == 0)
 {
     die "No filename(s) supplied\n";

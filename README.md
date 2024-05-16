@@ -1,11 +1,9 @@
 # Summary
-| Code | Severity | Tool | Count (28) |
+| Code | Severity | Tool | Count (25) |
 |---|---|---|---|
 | missing-qobject-macro | warning | clazy | 22 |
 | cppcoreguidelines-missing-std-forward | warning | clang-tidy | 2 |
-| redundant-decls | warning | generic | 2 |
 | qproperty-type-mismatch | warning | clazy | 1 |
-| readability-redundant-declaration | warning | clang-tidy | 1 |
 # Details
 | File:Line:Column | Message |
 |---|---|
@@ -37,8 +35,3 @@
 | [valuetype.h:24](https://github.com/graphia-app/graphia/blame/qt-add-qml-module/SharedTypes/valuetype.h#L24 "SharedTypes/valuetype.h:24"):1 | ValueType_reflector is missing a Q_OBJECT macro |
 | <h3>qproperty-type-mismatch</h3> | <h4>clazy warning</h4> |
 | [correlationplot.h:428](https://github.com/graphia-app/graphia/blame/qt-add-qml-module/Plugins/Correlation/correlationplot.h#L428 "Plugins/Correlation/correlationplot.h:428"):5 | Q_PROPERTY 'selectedColumns' of type 'std::vector<size_t>' is mismatched with method 'selectedColumns' of return type 'vector<unsignedlong>' |
-| <h3>readability-redundant-declaration</h3> | <h4>clang-tidy warning</h4> |
-| [preferenceswatcher.h:29](https://github.com/graphia-app/graphia/blame/qt-add-qml-module/source/app/preferenceswatcher.h#L29 "source/app/preferenceswatcher.h:29"):20 | redundant 'setPref' declaration |
-| <h3>redundant-decls</h3> | <h4>generic warning</h4> |
-| [preferences.h:33](https://github.com/graphia-app/graphia/blame/qt-add-qml-module/source/app/preferences.h#L33 "source/app/preferences.h:33"):10 | redundant redeclaration of ‘void u::setPref(const QString&, const QVariant&)’ in same scope |
-| [preferenceswatcher.h:29](https://github.com/graphia-app/graphia/blame/qt-add-qml-module/source/app/preferenceswatcher.h#L29 "source/app/preferenceswatcher.h:29"):20 | redundant redeclaration of ‘void u::setPref(const QString&, const QVariant&)’ in same scope |

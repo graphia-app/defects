@@ -180,6 +180,8 @@ foreach my $filename (@ARGV)
         <$fh>;
     };
 
+    $text =~ s/\r\n/\n/g;
+
     for(keys %matchers)
     {
         my $tool = $_;

@@ -37,7 +37,7 @@ my $genericRegex = qr/^\s*
 my $clangTidyRegex = qr/^\s*
     (?<file>[^\n:]*):(?<line>\d+):((?<column>\d+):)?\s*
     (?<severity>warning|error):\s*
-    (?<message>[^\[]*?(\n[^\[]*?)?)
+    (?<message>[^\[\n]*?(\n[^\[\n]*?)?)
     (\s+\[(?<code>((?!-W)\w)[\w\-\.,]+)\]
     (\n(.+)(\n(\s*[\^~ ]+)(\n\s*(((?!.*(warning|error|note).*)[^\n])*))?)?)?)$/xm;
 my $clazyRegex = qr/^\s*

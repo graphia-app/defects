@@ -100,6 +100,31 @@ if(scalar @ARGV == 0)
     die "No filename(s) supplied\n";
 }
 
+my $lastTransientTime = 0;
+
+use constant TRANSIENT_INTERVAL => 5;
+
+use constant WINDOW_LINES => 2000;
+use constant WINDOW_OVERLAP_LINES => 20;
+
+sub progress
+{
+    my($message, $transient) = @_;
+
+    if($transient)
+    {
+        my $now = time();
+        if(($now - $lastTransientTime) < TRANSIENT_INTERVAL)
+        {
+            return;
+        }
+
+        $lastTransientTime = $now;
+    }
+
+    print STDERR "$message\n";
+}
+
 sub resolvePath
 {
     my($path) = @_;
@@ -169,9 +194,14 @@ sub resolvePath
 }
 
 my @rows = ();
+my $numFiles = scalar @ARGV;
+my $fileIndex = 0;
 
 foreach my $filename (@ARGV)
 {
+    $fileIndex++;
+    progress("[$fileIndex/$numFiles] Reading " . basename($filename));
+
     my $text = do
     {
         local $/ = undef;
@@ -182,113 +212,151 @@ foreach my $filename (@ARGV)
 
     $text =~ s/\r\n/\n/g;
 
-    for(keys %matchers)
+    my @lines = split(/^/, $text);
+    my $numLines = scalar @lines;
+
+    my @windows;
+    for(my $start = 0; $start < $numLines; $start += WINDOW_LINES)
+    {
+        my $end = $start + WINDOW_LINES + WINDOW_OVERLAP_LINES - 1;
+        if($end > ($numLines - 1))
+        {
+            $end = $numLines - 1;
+        }
+
+        push @windows, join("", @lines[$start .. $end]);
+    }
+
+    undef @lines;
+
+    my $numWindows = scalar @windows;
+    my $numTools = scalar keys %matchers;
+    my $toolIndex = 0;
+
+    progress("[$fileIndex/$numFiles] " . basename($filename) .
+        ": $numLines lines, $numWindows windows, $numTools matchers");
+
+    for(sort keys %matchers)
     {
         my $tool = $_;
         my $regex = $matchers{$_};
-        while($text =~ m/$regex/g)
+        my $windowIndex = 0;
+        $toolIndex++;
+
+        foreach my $window (@windows)
         {
-            my $file = $+{file};
-            my $line = $+{line};
-            my $column = $+{column};
-            my $severity = $+{severity};
-            my $message = $+{message};
-            my $code = $+{code};
+            my $done = (($toolIndex - 1) * $numWindows) + $windowIndex++;
+            my $percent = int(($done * 100) / ($numTools * $numWindows));
+            progress("[$fileIndex/$numFiles] " . basename($filename) .
+                " ${percent}%: $tool ($toolIndex/$numTools) " .
+                "window $windowIndex/$numWindows, " .
+                scalar @rows . " rows", 1);
 
-            if(not defined $file || not defined $line || not defined $message)
+            while($window =~ m/$regex/g)
             {
-                next;
-            }
+                my $file = $+{file};
+                my $line = $+{line};
+                my $column = $+{column};
+                my $severity = $+{severity};
+                my $message = $+{message};
+                my $code = $+{code};
 
-            my $canonicalFile = resolvePath($file);
-
-            foreach my $filterRegex (@filterRegexes)
-            {
-                $canonicalFile =~ s/$filterRegex//;
-            }
-
-            if($canonicalFile eq "")
-            {
-                next;
-            }
-
-            my $fileWithPosition = "";
-
-            if($linkTemplate ne "")
-            {
-                my $link = $linkTemplate;
-                $link =~ s/%file/$canonicalFile/g;
-                $link =~ s/%line/$line/g;
-
-                my $baseFile = basename($canonicalFile);
-                $fileWithPosition = "[$baseFile:$line]($link \"$canonicalFile:$line\")";
-            }
-            else
-            {
-                $fileWithPosition = "$canonicalFile:$line";
-            }
-
-            if(defined $column)
-            {
-                $fileWithPosition .= ":$column";
-            }
-
-            # If there is no code, heuristically make one up by removing
-            # things that look like identifiers from the message
-            if(not defined $code)
-            {
-                $code = "";
-
-                my $tokenCount = 0;
-                my @tokens = split(/\s+/, $message);
-                foreach my $token (@tokens)
+                if(not defined $file || not defined $line || not defined $message)
                 {
-                    if($token =~ /^[A-Za-z][a-z]+\.?$/)
-                    {
-                        $token =~ s/\.$//;
+                    next;
+                }
 
-                        if($code ne "")
+                my $canonicalFile = resolvePath($file);
+
+                foreach my $filterRegex (@filterRegexes)
+                {
+                    $canonicalFile =~ s/$filterRegex//;
+                }
+
+                if($canonicalFile eq "")
+                {
+                    next;
+                }
+
+                my $fileWithPosition = "";
+
+                if($linkTemplate ne "")
+                {
+                    my $link = $linkTemplate;
+                    $link =~ s/%file/$canonicalFile/g;
+                    $link =~ s/%line/$line/g;
+
+                    my $baseFile = basename($canonicalFile);
+                    $fileWithPosition = "[$baseFile:$line]($link \"$canonicalFile:$line\")";
+                }
+                else
+                {
+                    $fileWithPosition = "$canonicalFile:$line";
+                }
+
+                if(defined $column)
+                {
+                    $fileWithPosition .= ":$column";
+                }
+
+                # If there is no code, heuristically make one up by removing
+                # things that look like identifiers from the message
+                if(not defined $code)
+                {
+                    $code = "";
+
+                    my $tokenCount = 0;
+                    my @tokens = split(/\s+/, $message);
+                    foreach my $token (@tokens)
+                    {
+                        if($token =~ /^[A-Za-z][a-z]+\.?$/)
                         {
-                            $code .= "-";
+                            $token =~ s/\.$//;
+
+                            if($code ne "")
+                            {
+                                $code .= "-";
+                            }
+
+                            $code .= lc($token);
+                            $tokenCount++;
                         }
 
-                        $code .= lc($token);
-                        $tokenCount++;
-                    }
-
-                    if($tokenCount >= 5)
-                    {
-                        last;
+                        if($tokenCount >= 5)
+                        {
+                            last;
+                        }
                     }
                 }
-            }
 
-            if(defined $severity)
-            {
-                $severity = lc($severity);
-            }
+                if(defined $severity)
+                {
+                    $severity = lc($severity);
+                }
 
-            my $errorClass = "$code";
-            if(defined $severity)
-            {
-                $errorClass .= " ($tool $severity)";
-            }
-            else
-            {
-                $errorClass .= " ($tool)";
-            }
+                my $errorClass = "$code";
+                if(defined $severity)
+                {
+                    $errorClass .= " ($tool $severity)";
+                }
+                else
+                {
+                    $errorClass .= " ($tool)";
+                }
 
-            if(not defined $severity)
-            {
-                $severity = "unknown";
-            }
+                if(not defined $severity)
+                {
+                    $severity = "unknown";
+                }
 
-            my @row = ($fileWithPosition, $message, $errorClass, $code, $severity, $tool);
-            push @rows, \@row;
+                my @row = ($fileWithPosition, $message, $errorClass, $code, $severity, $tool);
+                push @rows, \@row;
+            }
         }
     }
 }
 
+progress("Sorting " . scalar @rows . " rows");
 @rows = sort { ($a->[2] cmp $b->[2]) || ($a->[0] cmp $b->[0]) } @rows;
 
 sub uniq
@@ -297,7 +365,10 @@ sub uniq
   return grep ! $seen{ Dumper $_ }++, @_;
 }
 
+progress("Deduplicating " . scalar @rows . " rows");
 @rows = uniq(@rows);
+
+progress("Generating table from " . scalar @rows . " rows");
 
 sub printTable
 {

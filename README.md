@@ -1,6 +1,17 @@
 # Summary
-| Code | Severity | Tool | Count (0) |
+| Code | Severity | Tool | Count (9) |
 |---|---|---|---|
+| performance-enum-size | warning | clang-tidy | 9 |
 # Details
 | File:Line:Column | Message |
 |---|---|
+| <h3>performance-enum-size</h3> | <h4>clang-tidy warning</h4> |
+| [application.h:112](https://github.com/graphia-app/graphia/blame/gcc-14-clang-19/source/app/ui/qml/Graphia/application.h#L112 "source/app/ui/qml/Graphia/application.h:112"):10 | enum 'Roles' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size |
+| [application.h:81](https://github.com/graphia-app/graphia/blame/gcc-14-clang-19/source/app/ui/qml/Graphia/application.h#L81 "source/app/ui/qml/Graphia/application.h:81"):10 | enum 'Roles' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size |
+| [availableattributesmodel.h:86](https://github.com/graphia-app/graphia/blame/gcc-14-clang-19/source/app/ui/qml/Graphia/availableattributesmodel.h#L86 "source/app/ui/qml/Graphia/availableattributesmodel.h:86"):10 | enum 'Roles' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size |
+| [availabletransformsmodel.h:41](https://github.com/graphia-app/graphia/blame/gcc-14-clang-19/source/app/ui/qml/Graphia/availabletransformsmodel.h#L41 "source/app/ui/qml/Graphia/availabletransformsmodel.h:41"):10 | enum 'Roles' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size |
+| [editattributetablemodel.h:89](https://github.com/graphia-app/graphia/blame/gcc-14-clang-19/source/app/ui/qml/Graphia/editattributetablemodel.h#L89 "source/app/ui/qml/Graphia/editattributetablemodel.h:89"):10 | enum 'Roles' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size |
+| [enrichmenttablemodel.h:58](https://github.com/graphia-app/graphia/blame/gcc-14-clang-19/source/app/attributes/enrichmenttablemodel.h#L58 "source/app/attributes/enrichmenttablemodel.h:58"):10 | enum 'Roles' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size |
+| [nodeattributetablemodel.h:81](https://github.com/graphia-app/graphia/blame/gcc-14-clang-19/source/shared/plugins/nodeattributetablemodel.h#L81 "source/shared/plugins/nodeattributetablemodel.h:81"):10 | enum 'Roles' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size |
+| [tableproxymodel.h:79](https://github.com/graphia-app/graphia/blame/gcc-14-clang-19/source/app/ui/qml/Graphia/Utils/tableproxymodel.h#L79 "source/app/ui/qml/Graphia/Utils/tableproxymodel.h:79"):10 | enum 'Roles' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size |
+| [tabulardataparser.h:61](https://github.com/graphia-app/graphia/blame/gcc-14-clang-19/source/app/ui/qml/Graphia/Loading/tabulardataparser.h#L61 "source/app/ui/qml/Graphia/Loading/tabulardataparser.h:61"):10 | enum 'Roles' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size |

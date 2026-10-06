@@ -62,18 +62,19 @@ my $msvcRegex = qr/^
     (?<severity>error|warning)|[^\s]+)\s+
     (?<code>\w{1,2}\d+)\s*:\s*
     (?<message>.+)$/xm;
-my $qmllintRegex = qr/^\s*
-    (?<severity>Warning|Info):\s*
-    (?<file>[^\n:]*):(?<line>\d+):((?<column>\d+):)?\s*
-    (?<message>.*)$/xm;
+my $qmllintRegex = qr/
+    (?<severity>Warning|Info|Error):\s*
+    (?<file>(?:[A-Za-z]:)?[^\n:]*):(?<line>\d+):((?<column>\d+):)?\s*
+    (?<message>[^\n]*?)
+    (\s+\[(?<code>[\w\-\.]+)\])?$/xm;
 
 my %matchers = (
     "generic" => $genericRegex,
     "clang-tidy" => $clangTidyRegex,
     "clazy" => $clazyRegex,
     "cppcheck" => $cppCheckRegex,
-    "msvc" => $msvcRegex
-    #"qmllint" => $qmllintRegex
+    "msvc" => $msvcRegex,
+    "qmllint" => $qmllintRegex
 );
 
 my $outputStyle = 'csv';

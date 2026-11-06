@@ -46,17 +46,15 @@ my $clazyRegex = qr/^\s*
     (?<message>.*?(\n.*?)?)
     (\s+\[-Wclazy-(?<code>\w[\w\-\.]+)\])$/xm;
 my $cppCheckRegex = qr/^
-    \s*<error(\s+(
-        id="(?<code>[^"]+)"|
-        severity="(?<severity>[^"]+)"|
-        verbose="(?<message>[^"]+)"|
-        [^=]+="[^"]+"
-    ))+>\s*<location(\s+(
-        file="(?<file>[^"]+)"|
-        line="(?<line>[^"]+)"|
-        column="(?<column>[^"]+)"|
-        [^=]+="[^"]+"
-    ))+\/>\s*<\/error>$/xm;
+    \s*<error
+    (?=[^>]*\sid="(?<code>[^"]+)")
+    (?=[^>]*\sseverity="(?<severity>[^"]+)")
+    (?=[^>]*\sverbose="(?<message>[^"]+)")
+    [^>]*>\s*<location
+    (?=[^>]*\sfile="(?<file>[^"]+)")
+    (?=[^>]*\sline="(?<line>[^"]+)")
+    (?=[^>]*\scolumn="(?<column>[^"]+)")
+    [^>]*\/>/xm;
 my $msvcRegex = qr/^
     (?<file>[^\s\(]*)\((?<line>\d+),?(?<column>\d+)?(?:,\d+,\d+)?\)\s*:\s+(
     (?<severity>error|warning)|[^\s]+)\s+
